@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unconventional Neuroscientists</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            height: 50px;
+            width: 50px;
+            background: #D2691E;
+            border-radius: 50%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo::before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background: #333;
+            border-radius: 50%;
+        }
+
+        .logo::after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 4px;
+            background: #333;
+            transform: rotate(45deg);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #D2691E;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #D2691E 0%, #CD853F 100%);
+            text-align: center;
+            padding: 0 2rem;
+            position: relative;
+        }
+
+        .hero-logo {
+            width: 200px;
+            height: 200px;
+            background: white;
+            border-radius: 50%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 3rem;
+            animation: float 3s ease-in-out infinite;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+        }
+
+        .hero-logo::before {
+            content: '';
+            width: 80px;
+            height: 80px;
+            background: #D2691E;
+            border-radius: 50%;
+        }
+
+        .hero-logo::after {
+            content: '';
+            position: absolute;
+            width: 120px;
+            height: 16px;
+            background: #333;
+            transform: rotate(45deg);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 400;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 8rem 0;
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .section-content {
+            padding: 0 2rem;
+        }
+
+        /* About Section */
+        .about {
+            background: #f8f9fa;
+            position: relative;
+        }
+
+        .about::before {
+            content: 'ABOUT';
+            position: absolute;
+            font-size: 12rem;
+            font-weight: 900;
+            color: rgba(210, 105, 30, 0.1);
+            top: 2rem;
+            right: -2rem;
+            z-index: 1;
+            letter-spacing: -0.05em;
+        }
+
+        .about-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+            margin-left: 0;
+        }
+
+        .about h2 {
+            font-size: 4rem;
+            font-weight: 800;
+            color: #333;
+            margin-bottom: 2rem;
+            text-align: left;
+            letter-spacing: -0.03em;
+        }
+
+        .about p {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            color: #666;
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        /* Monthly Meetups Section */
+        .meetups {
+            background: white;
+            padding: 8rem 0;
+            position: relative;
+        }
+
+        .meetups::before {
+            content: 'MEET';
+            position: absolute;
+            font-size: 10rem;
+            font-weight: 900;
+            color: rgba(51, 51, 51, 0.05);
+            top: 1rem;
+            left: -1rem;
+            z-index: 1;
+            letter-spacing: -0.05em;
+        }
+
+        .meetup-card {
+            background: white;
+            border-radius: 30px;
+            padding: 4rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: 4rem;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.12);
+            border: 1px solid #f0f0f0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .meetup-card h2 {
+            color: #D2691E;
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            text-align: left;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .meetup-card p {
+            font-size: 1.5rem;
+            color: #333;
+            margin: 0;
+            font-weight: 500;
+            text-align: left;
+        }
+
+        /* Get Involved Section */
+        .get-involved {
+            background: #333;
+            color: white;
+            position: relative;
+        }
+
+        .get-involved::before {
+            content: 'JOIN';
+            position: absolute;
+            font-size: 11rem;
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.05);
+            top: 2rem;
+            right: -2rem;
+            z-index: 1;
+            letter-spacing: -0.05em;
+        }
+
+        .get-involved-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+            margin-left: 0;
+        }
+
+        .get-involved h2 {
+            color: white;
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            text-align: left;
+            letter-spacing: -0.03em;
+        }
+
+        .community-tagline {
+            font-size: 1.4rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 3rem;
+            text-align: left;
+            line-height: 1.6;
+        }
+
+        .join-button {
+            display: inline-block;
+            background: #D2691E;
+            color: white;
+            padding: 1.8rem 4rem;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.4rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            letter-spacing: 0.02em;
+        }
+
+        .join-button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 50px rgba(210, 105, 30, 0.4);
+            background: #B8641F;
+        }
+
+        /* Help Shape Section */
+        .help-shape {
+            background: #f8f9fa;
+            position: relative;
+        }
+
+        .help-shape::before {
+            content: 'SHAPE';
+            position: absolute;
+            font-size: 10rem;
+            font-weight: 900;
+            color: rgba(210, 105, 30, 0.08);
+            top: 1rem;
+            left: -2rem;
+            z-index: 1;
+            letter-spacing: -0.05em;
+        }
+
+        .help-shape-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: 0;
+            text-align: right;
+        }
+
+        .help-shape h2 {
+            font-size: 4rem;
+            font-weight: 800;
+            color: #333;
+            margin-bottom: 2rem;
+            letter-spacing: -0.03em;
+        }
+
+        .help-shape p {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #D2691E;
+            color: white;
+            padding: 1.5rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            margin-top: 2rem;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(210, 105, 30, 0.4);
+            background: #B8641F;
+        }
+
+        /* Footer */
+        .footer {
+            background: #222;
+            color: white;
+            padding: 2rem 0;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .footer-discord {
+            background: #D2691E;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .footer-discord:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(210, 105, 30, 0.4);
+            background: #B8641F;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: flex;
+                gap: 1.2rem;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .tagline {
+                font-size: 1.2rem;
+            }
+
+            .about::before,
+            .meetups::before,
+            .get-involved::before,
+            .help-shape::before {
+                font-size: 6rem;
+            }
+
+            .about h2,
+            .get-involved h2,
+            .help-shape h2 {
+                font-size: 2.8rem;
+            }
+
+            .hero-logo {
+                width: 150px;
+                height: 150px;
+            }
+
+            .hero-logo::before {
+                width: 60px;
+                height: 60px;
+            }
+
+            .hero-logo::after {
+                width: 90px;
+                height: 12px;
+            }
+
+            .meetup-card {
+                margin: 0 1rem;
+                padding: 2.5rem;
+                max-width: none;
+            }
+
+            .about-content,
+            .get-involved-content,
+            .help-shape-content {
+                max-width: none;
+                margin: 0;
+                text-align: left;
+            }
+
+            .help-shape-content {
+                text-align: left;
+            }
+
+            .join-button {
+                padding: 1.4rem 3rem;
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo"></div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="team.html">The Team</a></li>
+                <li><a href="#get-involved">Get Involved</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-logo"></div>
+        <h1>Unconventional Neuroscientists</h1>
+        <p class="tagline">[Placeholder tagline - Breaking boundaries in brain research through diverse perspectives]</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="section-content">
+            <div class="about-content">
+                <h2>About</h2>
+                <p>[Placeholder: Why I started this community]</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>[Placeholder: Personal story about unconventional approaches to neuroscience and the need for this community]</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Monthly Meetups Section -->
+    <section id="meetups" class="meetups">
+        <div class="section-content">
+            <div class="meetup-card">
+                <h2>Monthly Meetups</h2>
+                <p>Come join us on first Tuesdays of every month</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Involved Section -->
+    <section id="get-involved" class="section get-involved">
+        <div class="section-content">
+            <div class="get-involved-content">
+                <h2>Join the Community</h2>
+                <p class="community-tagline">Connect with fellow unconventional neuroscientists, share ideas, and collaborate on groundbreaking projects that push the boundaries of brain research.</p>
+                <a href="#" class="join-button">Join Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Help Shape Section -->
+    <section id="help-shape" class="section help-shape">
+        <div class="section-content">
+            <div class="help-shape-content">
+                <h2>Help Shape the Community</h2>
+                <p>Your input matters! Help us build a community that truly serves unconventional neuroscientists. Share your ideas, needs, and vision for what this community could become.</p>
+                <p>Whether you're interested in interdisciplinary research, alternative career paths, innovative methodologies, or building bridges between neuroscience and other fields - we want to hear from you.</p>
+                <a href="#" class="cta-button">Share Your Ideas</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <a href="#" class="footer-discord">Join Discord</a>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header background on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+    </script>
+</body>
+</html>
