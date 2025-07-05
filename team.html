@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Team - Unconventional Neuroscientists</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            height: 50px;
+            width: 50px;
+            background: #D2691E;
+            border-radius: 50%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        .logo::before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background: #333;
+            border-radius: 50%;
+        }
+
+        .logo::after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 4px;
+            background: #333;
+            transform: rotate(45deg);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #D2691E;
+        }
+
+        .nav-links a.active {
+            color: #D2691E;
+            font-weight: 600;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            background: linear-gradient(135deg, #D2691E 0%, #CD853F 100%);
+            padding: 8rem 2rem 4rem;
+            position: relative;
+        }
+
+        .hero::before {
+            content: 'TEAM';
+            position: absolute;
+            font-size: 15rem;
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.1);
+            top: 1rem;
+            right: -3rem;
+            z-index: 1;
+            letter-spacing: -0.05em;
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 5rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            max-width: 600px;
+        }
+
+        .hero-tagline {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 500px;
+            font-weight: 400;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 8rem 0;
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .content-wrapper {
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            align-items: start;
+        }
+
+        /* Founder Section */
+        .founder-section {
+            position: relative;
+        }
+
+        .founder-section::before {
+            content: 'FOUNDER';
+            position: absolute;
+            font-size: 8rem;
+            font-weight: 900;
+            color: rgba(210, 105, 30, 0.05);
+            top: -3rem;
+            left: -2rem;
+            z-index: 1;
+            letter-spacing: -0.05em;
+        }
+
+        .founder-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .founder-name {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #D2691E;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .founder-title {
+            font-size: 1.3rem;
+            color: #666;
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        .founder-bio {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+
+        .founder-quote {
+            background: #f8f9fa;
+            border-left: 4px solid #D2691E;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 0 10px 10px 0;
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        /* Photo Section */
+        .photo-section {
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .photo-placeholder {
+            width: 400px;
+            height: 500px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #666;
+            font-size: 1.2rem;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.1);
+            border: 2px solid #f0f0f0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .photo-placeholder::before {
+            content: '📸';
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+
+        .photo-accent {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: #D2691E;
+            border-radius: 50%;
+            top: -50px;
+            right: -50px;
+            opacity: 0.1;
+        }
+
+        /* Vision Section */
+        .vision-section {
+            background: #333;
+            color: white;
+            padding: 8rem 0;
+            position: relative;
+        }
+
+        .vision-section::before {
+            content: 'VISION';
+            position: absolute;
+            font-size: 12rem;
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.03);
+            top: 1rem;
+            left: -2rem;
+            z-index: 1;
+            letter-spacing: -0.05em;
+        }
+
+        .vision-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+            text-align: right;
+        }
+
+        .vision-content h2 {
+            font-size: 4rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 2rem;
+            letter-spacing: -0.03em;
+            max-width: 700px;
+            margin-left: auto;
+        }
+
+        .vision-content p {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 1.5rem;
+            max-width: 700px;
+            margin-left: auto;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: #f8f9fa;
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .contact-section h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 2rem;
+            letter-spacing: -0.02em;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-link {
+            display: inline-block;
+            background: #D2691E;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .contact-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(210, 105, 30, 0.4);
+            background: #B8641F;
+        }
+
+        /* Footer */
+        .footer {
+            background: #222;
+            color: white;
+            padding: 2rem 0;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-back {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .footer-back:hover {
+            color: #D2691E;
+        }
+
+        .footer-discord {
+            background: #D2691E;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .footer-discord:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(210, 105, 30, 0.4);
+            background: #B8641F;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: flex;
+                gap: 1.2rem;
+                font-size: 0.9rem;
+            }
+
+            .hero::before,
+            .founder-section::before,
+            .vision-section::before {
+                font-size: 6rem;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .founder-name {
+                font-size: 2.5rem;
+            }
+
+            .vision-content h2 {
+                font-size: 2.8rem;
+            }
+
+            .content-wrapper {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+            }
+
+            .photo-section {
+                justify-content: center;
+            }
+
+            .photo-placeholder {
+                width: 300px;
+                height: 400px;
+            }
+
+            .vision-content {
+                text-align: left;
+            }
+
+            .vision-content h2,
+            .vision-content p {
+                margin-left: 0;
+                max-width: none;
+            }
+
+            .contact-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo"></a>
+            <ul class="nav-links">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="team.html" class="active">The Team</a></li>
+                <li><a href="index.html#get-involved">Get Involved</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Meet the Founder</h1>
+            <p class="hero-tagline">The visionary behind Unconventional Neuroscientists</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="main-content">
+        <div class="content-wrapper">
+            <!-- Founder Info -->
+            <div class="founder-section">
+                <div class="founder-content">
+                    <h2 class="founder-name">Nayanika Biswas</h2>
+                    <p class="founder-title">Founder & Community Leader</p>
+                    
+                    <p class="founder-bio">
+                        [Placeholder: Background about Nayanika's journey into neuroscience and what makes her approach unconventional]
+                    </p>
+                    
+                    <p class="founder-bio">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+                    </p>
+                    
+                    <div class="founder-quote">
+                        "[Placeholder quote about the vision for unconventional neuroscience and building this community]"
+                    </div>
+                    
+                    <p class="founder-bio">
+                        [Placeholder: More details about Nayanika's background, education, current work, and what drives her passion for bringing together unconventional thinkers in neuroscience]
+                    </p>
+                </div>
+            </div>
+
+            <!-- Photo Section -->
+            <div class="photo-section">
+                <div class="photo-placeholder">
+                    <div class="photo-accent"></div>
+                    <div>Nayanika's Photo</div>
+                    <div style="font-size: 0.9rem; margin-top: 1rem; opacity: 0.7;">Professional headshot placeholder</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="vision-section">
+        <div class="vision-content">
+            <h2>Building the Future of Neuroscience</h2>
+            <p>
+                [Placeholder: Nayanika's vision for how unconventional approaches can revolutionize neuroscience research and understanding]
+            </p>
+            <p>
+                The future of brain research lies not in traditional silos, but in the creative intersection of disciplines, methods, and perspectives. This community exists to foster those connections and empower researchers who think differently.
+            </p>
+            <p>
+                [Placeholder: Goals for the community, what success looks like, and how members can contribute to this vision]
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-content">
+            <h2>Connect with Nayanika</h2>
+            <p>Have questions about the community or want to collaborate? Reach out!</p>
+            
+            <div class="contact-links">
+                <a href="mailto:nayanika@example.com" class="contact-link">Email</a>
+                <a href="#" class="contact-link">LinkedIn</a>
+                <a href="#" class="contact-link">Twitter</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <a href="index.html" class="footer-back">← Back to Main Site</a>
+            <a href="#" class="footer-discord">Join Discord</a>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header background on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+    </script>
+</body>
+</html>
