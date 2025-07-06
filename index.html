@@ -177,7 +177,7 @@
             position: absolute;
             font-size: 12rem;
             font-weight: 900;
-            color: rgba(0, 0, 0, 0.1);
+            color: rgba(0, 0, 0, 0.15);
             top: 2rem;
             right: 2rem;
             z-index: 1;
@@ -218,7 +218,7 @@
             position: absolute;
             font-size: 11rem;
             font-weight: 900;
-            color: rgba(210, 105, 30, 0.1);
+            color: rgba(210, 105, 30, 0.15);
             top: 1rem;
             left: 1rem;
             z-index: 1;
@@ -493,8 +493,18 @@
             .about::before,
             .meetups::before,
             .get-involved::before,
-            .help-shape::before {
+            .help-shape::before,
+            .community-promise::before,
+            .vision::before {
                 font-size: 6rem;
+                top: 1rem;
+                right: 1rem;
+                left: auto;
+            }
+
+            .vision::before {
+                left: 1rem;
+                right: auto;
             }
 
             .about h2,
@@ -557,9 +567,10 @@
         /* HANDWRITTEN LETTER STYLES - MUST BE AT END TO OVERRIDE OTHER RULES */
         .about .handwritten-letter {
             background-image: url('crumpled-paper.jpg');
-            background-size: cover;
+            background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
+            background-color: #f5f5f0;
             padding: 3rem 4rem 3rem 4rem !important;
             margin: 2rem auto !important;
             border-radius: 10px;
@@ -570,6 +581,7 @@
                 0 2px 6px rgba(0,0,0,0.08);
             position: relative;
             max-width: 900px;
+            min-height: 400px;
         }
 
         .about .handwritten-letter::before {
@@ -635,7 +647,7 @@
             <div class="about-content">
                 <h2>My Story</h2>
                 
-                <p class="letter-intro">A letter from Nayanika:</p>
+                <h1 class="letter-intro">A letter from the founder</h1>
                 
                 <!-- Audio Player -->
                 <div style="margin-bottom: 2rem;">
@@ -647,6 +659,8 @@
                 </div>
 
                 <div class="handwritten-letter">
+                    <p>Dear reader,</p>
+                    
                     <p>I've struggled a lot to find my place in this field. I never formally studied neuroscience, either before or after deciding to pursue it. I taught myself everything I know through textbooks, research papers, and by cold-emailing people.</p>
                     
                     <p>That made the journey difficult, but it also taught me things that no class ever could. Within two years of pivoting to neuroscience, I led my first research project. Along the way, I got to interact with researchers, clinicians, consumers, investors, and individuals with lived experience.</p>
@@ -656,6 +670,9 @@
                     <p>But the hardest part of it all was the isolation. My story felt very different from those around me. Then I realized that almost every person I admire in neuroscience has a story like mine. That's just the nature of science. But the people who seemed to enjoy the process most had one thing in common: they had a community.</p>
                     
                     <div class="closing">That's why I created Unconventional Neuroscientists.</div>
+
+                    <p>Yours Sincerely,</p>
+                    <p>Nayanika</p>
                 </div>
             </div>
         </div>
