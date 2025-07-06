@@ -567,7 +567,7 @@
         /* HANDWRITTEN LETTER STYLES - MUST BE AT END TO OVERRIDE OTHER RULES */
         .about .handwritten-letter {
             background-image: url('crumpled-paper.jpg');
-            background-size: contain;
+            background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             background-color: #f5f5f0;
@@ -582,7 +582,9 @@
             position: relative;
             max-width: 900px;
             min-height: 400px;
+            border: 2px solid red;
         }
+
 
         .about .handwritten-letter::before {
             content: '';
