@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unconventional Neuroscientists</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&family=Alex+Brush&family=Great+Vibes:wght@400&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -25,11 +25,11 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(17, 17, 17, 0.95);
             backdrop-filter: blur(10px);
             padding: 1rem 0;
             z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.3);
         }
 
         .nav-container {
@@ -77,7 +77,7 @@
 
         .nav-links a {
             text-decoration: none;
-            color: #333;
+            color: white;
             font-weight: 500;
             font-size: 1.1rem;
             transition: color 0.3s ease;
@@ -103,7 +103,7 @@
         .hero-logo {
             width: 200px;
             height: 200px;
-            background: white;
+            background: #D2691E;
             border-radius: 50%;
             position: relative;
             display: flex;
@@ -111,14 +111,14 @@
             justify-content: center;
             margin-bottom: 3rem;
             animation: float 3s ease-in-out infinite;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
         }
 
         .hero-logo::before {
             content: '';
             width: 80px;
             height: 80px;
-            background: #D2691E;
+            background: #000;
             border-radius: 50%;
         }
 
@@ -127,7 +127,7 @@
             position: absolute;
             width: 120px;
             height: 16px;
-            background: #333;
+            background: #000;
             transform: rotate(45deg);
         }
 
@@ -165,51 +165,112 @@
             padding: 0 2rem;
         }
 
-        /* About Section */
-        .about {
-            background: #f8f9fa;
+        /* Community Promise Section */
+        .community-promise {
+            background: #D2691E;
+            color: white;
             position: relative;
         }
 
-        .about::before {
-            content: 'ABOUT';
+        .community-promise::before {
+            content: 'BELONG';
             position: absolute;
             font-size: 12rem;
             font-weight: 900;
-            color: rgba(210, 105, 30, 0.1);
+            color: rgba(0, 0, 0, 0.1);
             top: 2rem;
             right: 2rem;
             z-index: 1;
             letter-spacing: -0.05em;
         }
 
-        .about-content {
+        .promise-content {
             position: relative;
             z-index: 2;
-            max-width: 600px;
-            margin-left: 0;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
         }
 
-        .about h2 {
+        .community-promise h2 {
             font-size: 4rem;
             font-weight: 800;
-            color: #333;
+            color: white;
             margin-bottom: 2rem;
-            text-align: left;
             letter-spacing: -0.03em;
         }
 
-        .about p {
+        .community-promise p {
             font-size: 1.3rem;
             line-height: 1.8;
-            color: #666;
+            color: rgba(255, 255, 255, 0.9);
             margin-bottom: 1.5rem;
-            text-align: left;
+        }
+
+        /* Vision Section */
+        .vision {
+            background: #111;
+            position: relative;
+        }
+
+        .vision::before {
+            content: 'VISION';
+            position: absolute;
+            font-size: 11rem;
+            font-weight: 900;
+            color: rgba(210, 105, 30, 0.1);
+            top: 1rem;
+            left: 1rem;
+            z-index: 1;
+            letter-spacing: -0.05em;
+        }
+
+        .vision-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .vision h2 {
+            font-size: 4rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 3rem;
+            text-align: center;
+            letter-spacing: -0.03em;
+        }
+
+        .vision-points {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        .vision-point {
+            background: rgba(210, 105, 30, 0.1);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border-left: 4px solid #D2691E;
+        }
+
+        .vision-point h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #D2691E;
+            margin-bottom: 1rem;
+            letter-spacing: -0.01em;
+        }
+
+        .vision-point p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.8);
         }
 
         /* Monthly Meetups Section */
         .meetups {
-            background: white;
+            background: #111;
             padding: 8rem 0;
             position: relative;
         }
@@ -219,7 +280,7 @@
             position: absolute;
             font-size: 10rem;
             font-weight: 900;
-            color: rgba(51, 51, 51, 0.05);
+            color: rgba(210, 105, 30, 0.1);
             top: 1rem;
             left: 2rem;
             z-index: 1;
@@ -227,20 +288,20 @@
         }
 
         .meetup-card {
-            background: white;
+            background: #D2691E;
             border-radius: 30px;
             padding: 4rem;
             max-width: 500px;
             margin-left: auto;
             margin-right: 4rem;
-            box-shadow: 0 30px 80px rgba(0,0,0,0.12);
-            border: 1px solid #f0f0f0;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+            border: none;
             position: relative;
             z-index: 2;
         }
 
         .meetup-card h2 {
-            color: #D2691E;
+            color: white;
             font-size: 2.8rem;
             margin-bottom: 1.5rem;
             text-align: left;
@@ -250,7 +311,7 @@
 
         .meetup-card p {
             font-size: 1.5rem;
-            color: #333;
+            color: white;
             margin: 0;
             font-weight: 500;
             text-align: left;
@@ -258,7 +319,7 @@
 
         /* Get Involved Section */
         .get-involved {
-            background: #333;
+            background: #111;
             color: white;
             position: relative;
         }
@@ -292,7 +353,7 @@
         }
 
         .community-tagline {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             color: rgba(255, 255, 255, 0.8);
             margin-bottom: 3rem;
             text-align: left;
@@ -322,7 +383,7 @@
 
         /* Help Shape Section */
         .help-shape {
-            background: #f8f9fa;
+            background: #111;
             position: relative;
         }
 
@@ -331,7 +392,7 @@
             position: absolute;
             font-size: 10rem;
             font-weight: 900;
-            color: rgba(210, 105, 30, 0.08);
+            color: rgba(210, 105, 30, 0.1);
             top: 1rem;
             left: 1rem;
             z-index: 1;
@@ -350,15 +411,15 @@
         .help-shape h2 {
             font-size: 4rem;
             font-weight: 800;
-            color: #333;
+            color: white;
             margin-bottom: 2rem;
             letter-spacing: -0.03em;
         }
 
         .help-shape p {
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             line-height: 1.8;
-            color: #666;
+            color: rgba(255, 255, 255, 0.8);
             margin-bottom: 1.5rem;
         }
 
@@ -383,9 +444,9 @@
 
         /* Footer */
         .footer {
-            background: #222;
+            background: #111;
             color: white;
-            padding: 2rem 0;
+            padding: 1.5rem 0;
         }
 
         .footer-content {
@@ -399,11 +460,11 @@
         .footer-discord {
             background: #D2691E;
             color: white;
-            padding: 1rem 2rem;
+            padding: 0.8rem 1.5rem;
             border-radius: 40px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: 1rem;
             transition: all 0.3s ease;
         }
 
@@ -475,10 +536,83 @@
                 text-align: left;
             }
 
+            .promise-content {
+                text-align: center;
+            }
+
+            .vision-points {
+                gap: 2rem;
+            }
+
+            .vision-point {
+                padding: 2rem;
+            }
+
             .join-button {
                 padding: 1.4rem 3rem;
                 font-size: 1.2rem;
             }
+        }
+
+        /* HANDWRITTEN LETTER STYLES - MUST BE AT END TO OVERRIDE OTHER RULES */
+        .about .handwritten-letter {
+            background-image: url('crumpled-paper.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 4rem 3.5rem 3.5rem 3.5rem !important;
+            margin: 2rem auto !important;
+            border-radius: 10px;
+            transform: rotate(-1deg);
+            box-shadow: 
+                0 8px 25px rgba(0,0,0,0.15),
+                0 4px 12px rgba(0,0,0,0.1),
+                0 2px 6px rgba(0,0,0,0.08);
+            position: relative;
+            max-width: 700px;
+        }
+
+        .about .handwritten-letter::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            pointer-events: none;
+        }
+
+        .about .handwritten-letter::after {
+            content: '';
+            display: none;
+        }
+
+        .about .handwritten-letter p {
+            font-family: 'Great Vibes', 'Alex Brush', 'Brush Script MT', cursive !important;
+            font-size: 1.6rem !important;
+            line-height: 1.8 !important;
+            color: #2c2c2c !important;
+            font-weight: 400 !important;
+            margin-bottom: 1.5rem !important;
+            text-align: left !important;
+            position: relative;
+            z-index: 2;
+            text-shadow: 0 1px 2px rgba(255,255,255,0.3);
+        }
+
+        .about .handwritten-letter .closing {
+            font-family: 'Great Vibes', 'Alex Brush', 'Brush Script MT', cursive !important;
+            font-size: 1.8rem !important;
+            font-weight: 400 !important;
+            color: #D2691E !important;
+            margin-top: 2rem !important;
+            text-align: center !important;
+            transform: rotate(0.5deg);
+            position: relative;
+            z-index: 2;
+            text-shadow: 0 1px 2px rgba(255,255,255,0.3);
         }
     </style>
 </head>
@@ -502,15 +636,70 @@
         <p class="tagline">[Placeholder tagline - Breaking boundaries in brain research through diverse perspectives]</p>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="section about">
+    <!-- Personal Story Section -->
+    <section id="story" class="section about">
         <div class="section-content">
             <div class="about-content">
-                <h2>About</h2>
-                <p>[Placeholder: Why I started this community]</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <p>[Placeholder: Personal story about unconventional approaches to neuroscience and the need for this community]</p>
+                <h2>My Story</h2>
+                
+                <p class="letter-intro">A letter from Nayanika:</p>
+                
+                <!-- Audio Player -->
+                <div style="margin-bottom: 2rem;">
+                    <audio controls style="width: 100%; background: #D2691E; border-radius: 10px;">
+                        <source src="story-soundtrack.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.6); margin-top: 0.5rem; font-style: italic;">Optional soundtrack while you read</p>
+                </div>
+
+                <div class="handwritten-letter">
+                    <p>I've struggled a lot to find my place in this field. I never formally studied neuroscience, either before or after deciding to pursue it. I taught myself everything I know through textbooks, research papers, and by cold-emailing people.</p>
+                    
+                    <p>That made the journey difficult, but it also taught me things that no class ever could. Within two years of pivoting to neuroscience, I led my first research project. Along the way, I got to interact with researchers, clinicians, consumers, investors, and individuals with lived experience.</p>
+                    
+                    <p>I wore many hats: researcher, communicator, advisor. I explored several subfields including computational, cognitive, behavioral, and systems neuroscience. Life has been a roller coaster.</p>
+                    
+                    <p>But the hardest part of it all was the isolation. My story felt very different from those around me. Then I realized that almost every person I admire in neuroscience has a story like mine. That's just the nature of science. But the people who seemed to enjoy the process most had one thing in common: they had a community.</p>
+                    
+                    <div class="closing">That's why I created Unconventional Neuroscientists.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Promise Section -->
+    <section class="section community-promise">
+        <div class="section-content">
+            <div class="promise-content">
+                <h2>You Don't Have to Do It Alone</h2>
+                <p>I want to give you the kind of community I didn't have. Neuroscience isn't something people naturally fall into. It's almost always a nonlinear journey. But having people around you makes it okay when things don't make sense.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="section vision">
+        <div class="section-content">
+            <div class="vision-content">
+                <h2>Our Vision</h2>
+                
+                <div class="vision-points">
+                    <div class="vision-point">
+                        <h3>Safe Spaces for Real Talk</h3>
+                        <p>Large communities often don't feel intimate enough to share personal struggles. I want to change that. In this space, you should feel comfortable having a bad day, facing a tough decision, or feeling stuck, and being able to talk about it openly.</p>
+                    </div>
+                    
+                    <div class="vision-point">
+                        <h3>Discover Your Unique Path</h3>
+                        <p>Neuroscience is an enormous field. No one can know or do everything. This community is a place to explore what a neuroscience career means to you, based on your strengths, your interests, and your pace.</p>
+                    </div>
+                    
+                    <div class="vision-point">
+                        <h3>Innovate Beyond Boundaries</h3>
+                        <p>Let's build together. Whether you're interested in tools, ideas, content, or collaborations, this is a space to experiment and innovate at the intersection of disciplines and lived experiences.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -530,7 +719,7 @@
         <div class="section-content">
             <div class="get-involved-content">
                 <h2>Join the Community</h2>
-                <p class="community-tagline">Connect with fellow unconventional neuroscientists, share ideas, and collaborate on groundbreaking projects that push the boundaries of brain research.</p>
+                <p class="community-tagline">What are you curious about, struggling with, or hoping to explore? Let's get to know each other better.</p>
                 <a href="#" class="join-button">Join Us</a>
             </div>
         </div>
@@ -574,9 +763,9 @@
         window.addEventListener('scroll', () => {
             const header = document.querySelector('.header');
             if (window.scrollY > 100) {
-                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.background = 'rgba(17, 17, 17, 0.98)';
             } else {
-                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.background = 'rgba(17, 17, 17, 0.95)';
             }
         });
     </script>
