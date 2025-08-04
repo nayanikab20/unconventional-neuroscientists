@@ -44,29 +44,13 @@
         .logo {
             height: 50px;
             width: 50px;
-            background: #D2691E;
-            border-radius: 50%;
-            position: relative;
+            background-image: url('uneuro_logo_logo_zoom.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
             display: flex;
             align-items: center;
             justify-content: center;
-        }
-
-        .logo::before {
-            content: '';
-            width: 20px;
-            height: 20px;
-            background: #333;
-            border-radius: 50%;
-        }
-
-        .logo::after {
-            content: '';
-            position: absolute;
-            width: 30px;
-            height: 4px;
-            background: #333;
-            transform: rotate(45deg);
         }
 
         .nav-links {
@@ -103,32 +87,13 @@
         .hero-logo {
             width: 200px;
             height: 200px;
-            background: #D2691E;
-            border-radius: 50%;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background-image: url('uneuro_logo_logo_zoom.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
             margin-bottom: 3rem;
             animation: float 3s ease-in-out infinite;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-        }
-
-        .hero-logo::before {
-            content: '';
-            width: 80px;
-            height: 80px;
-            background: #000;
-            border-radius: 50%;
-        }
-
-        .hero-logo::after {
-            content: '';
-            position: absolute;
-            width: 120px;
-            height: 16px;
-            background: #000;
-            transform: rotate(45deg);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
         }
 
         @keyframes float {
@@ -149,20 +114,245 @@
             font-size: 1.5rem;
             color: rgba(255, 255, 255, 0.9);
             max-width: 600px;
-            margin: 0 auto;
+            margin: 0 auto 3rem;
             font-weight: 400;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .primary-cta {
+            background: #000;
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: 2px solid #000;
+        }
+
+        .primary-cta:hover {
+            background: white;
+            color: #000;
+            transform: translateY(-2px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .social-link {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 0.8rem;
+            border-radius: 50%;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            min-width: 45px;
+            min-height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social-link:hover {
+            background: white;
+            color: #D2691E;
+            transform: translateY(-2px);
+        }
+
+        /* Movement Section */
+        .movement {
+            background: #fff;
+            padding: 8rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .movement::before {
+            content: 'MOVEMENT';
+            position: absolute;
+            font-size: 8rem;
+            font-weight: 900;
+            color: rgba(210, 105, 30, 0.04);
+            top: 3rem;
+            left: -1rem;
+            z-index: 1;
+            letter-spacing: -0.05em;
+            transform: rotate(-5deg);
+        }
+
+        .movement-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .movement-opener {
+            font-size: 2.8rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 3rem;
+            line-height: 1.2;
+            color: #000;
+        }
+
+        .movement-opener .not-typical {
+            color: #D2691E;
+            text-decoration: underline;
+            text-decoration-color: rgba(210, 105, 30, 0.3);
+            text-underline-offset: 6px;
+        }
+
+        .bio-text {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            color: #333;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .bio-text.center {
+            text-align: center;
+            font-weight: 600;
+            color: #000;
+        }
+
+        .bio-highlight {
+            background: linear-gradient(135deg, rgba(210, 105, 30, 0.15) 0%, rgba(205, 133, 63, 0.08) 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2.5rem 0;
+            border-left: 4px solid #D2691E;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #000;
+            text-align: center;
+        }
+
+        .diverse-minds {
+            font-size: 2.2rem;
+            font-weight: 700;
+            text-align: center;
+            margin: 3rem 0;
+            color: #000;
+            line-height: 1.3;
+        }
+
+        .diverse-minds .orange {
+            color: #D2691E;
+        }
+
+        .final-question {
+            font-size: 1.8rem;
+            font-weight: 600;
+            text-align: center;
+            color: #D2691E;
+            font-style: italic;
+            margin-top: 3rem;
+            line-height: 1.4;
+        }
+
+        /* Mission Section */
+        .mission {
+            background: #000;
+            color: white;
+            padding: 8rem 0;
+            position: relative;
+        }
+
+        .mission::before {
+            content: 'MISSION';
+            position: absolute;
+            font-size: 12rem;
+            font-weight: 900;
+            color: rgba(210, 105, 30, 0.1);
+            top: 1rem;
+            right: 2rem;
+            z-index: 1;
+            letter-spacing: -0.05em;
+        }
+
+        .mission-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .mission h2 {
+            font-size: 4rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 3rem;
+            text-align: center;
+            letter-spacing: -0.03em;
+        }
+
+        .mission-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .mission-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(210, 105, 30, 0.3);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .mission-card:hover {
+            border-color: #D2691E;
+            background: rgba(210, 105, 30, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .mission-card .number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #D2691E;
+            margin-bottom: 1rem;
+        }
+
+        .mission-card p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.9);
         }
 
         /* Section Styles */
         .section {
             padding: 8rem 0;
-            max-width: 1400px;
-            margin: 0 auto;
             position: relative;
+            /* Remove white padding - extend to full width */
+            max-width: none;
+            margin: 0;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
         }
 
         .section-content {
             padding: 0 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
         }
 
         /* Community Promise Section */
@@ -170,6 +360,11 @@
             background: #D2691E;
             padding: 4rem 0;
             position: relative;
+            /* Extend orange background to full screen width */
+            max-width: none !important;
+            margin: 0 !important;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
         }
 
         .community-promise::before {
@@ -189,7 +384,8 @@
             z-index: 2;
             max-width: 800px;
             margin: 0 auto;
-            text-align: center;
+            text-align: left;
+            padding: 0 2rem;
         }
 
         .community-promise h2 {
@@ -212,6 +408,11 @@
             background: #111;
             padding: 4rem 0;
             position: relative;
+            /* Extend background to full screen width */
+            max-width: none !important;
+            margin: 0 !important;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
         }
 
         .vision::before {
@@ -231,6 +432,7 @@
             z-index: 2;
             max-width: 1000px;
             margin: 0 auto;
+            padding: 0 2rem;
         }
 
         .vision h2 {
@@ -274,6 +476,11 @@
             background: #111;
             padding: 4rem 0;
             position: relative;
+            /* Extend background to full screen width */
+            max-width: none !important;
+            margin: 0 !important;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
         }
 
         .meetups::before {
@@ -323,6 +530,11 @@
             background: #111;
             padding: 4rem 0;
             position: relative;
+            /* Extend background to full screen width */
+            max-width: none !important;
+            margin: 0 !important;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
         }
 
         .get-involved::before {
@@ -341,7 +553,8 @@
             position: relative;
             z-index: 2;
             max-width: 600px;
-            margin-left: 0;
+            margin: 0 auto;
+            padding: 0 2rem;
         }
 
         .get-involved h2 {
@@ -351,6 +564,7 @@
             margin-bottom: 2rem;
             text-align: left;
             letter-spacing: -0.03em;
+            white-space: nowrap;
         }
 
         .community-tagline {
@@ -361,31 +575,52 @@
             line-height: 1.6;
         }
 
-        .join-button {
-            display: inline-block;
-            background: #D2691E;
-            color: white;
-            padding: 1.8rem 4rem;
-            border-radius: 60px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.4rem;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            letter-spacing: 0.02em;
+        .social-icons {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            align-items: center;
         }
 
-        .join-button:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 50px rgba(210, 105, 30, 0.4);
-            background: #B8641F;
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            border: 2px solid rgba(255, 255, 255, 0.6);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            background: transparent;
+        }
+
+        .social-icon:hover {
+            border-color: #D2691E;
+            color: #D2691E;
+            background: rgba(210, 105, 30, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .platform-label {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-top: 1rem;
+            text-align: center;
         }
 
         /* Help Shape Section */
         .help-shape {
             background: #111;
             position: relative;
+            padding: 8rem 0;
+            /* Extend background to full screen width */
+            max-width: none !important;
+            margin: 0 !important;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
         }
 
         .help-shape::before {
@@ -404,9 +639,9 @@
             position: relative;
             z-index: 2;
             max-width: 700px;
-            margin-left: auto;
-            margin-right: 0;
-            text-align: right;
+            margin: 0 auto;
+            text-align: center;
+            padding: 0 2rem;
         }
 
         .help-shape h2 {
@@ -491,27 +726,72 @@
                 font-size: 1.2rem;
             }
 
+            .hero-ctas {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+
+            .mission::before,
             .about::before,
-            .meetups::before,
-            .get-involved::before,
-            .help-shape::before,
-            .community-promise::before,
-            .vision::before {
+            .movement::before,
+            .initiatives::before,
+            .events::before,
+            .get-involved::before {
                 font-size: 6rem;
                 top: 1rem;
                 right: 1rem;
                 left: auto;
             }
 
-            .vision::before {
+            .movement::before {
                 left: 1rem;
                 right: auto;
             }
 
-            .about h2,
-            .get-involved h2,
-            .help-shape h2 {
+            .about::before {
+                left: 1rem;
+                right: auto;
+            }
+
+            .mission h2,
+            .about .story-content h2,
+            .initiatives h2,
+            .events h2,
+            .get-involved h2 {
                 font-size: 2.8rem;
+            }
+
+            .mission-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .about .section-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .founder-photo {
+                margin: 0 auto;
+                max-width: 300px;
+                height: 400px;
+            }
+
+            .initiatives-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .next-event {
+                padding: 2.5rem 2rem;
+            }
+
+            .next-event h3 {
+                font-size: 2rem;
             }
 
             .hero-logo {
@@ -529,96 +809,334 @@
                 height: 12px;
             }
 
-            .meetup-card {
-                margin: 0 1rem;
-                padding: 2.5rem;
-                max-width: none;
+            .get-involved h2 {
+                font-size: 2.8rem;
+                white-space: normal;
             }
 
-            .about-content,
-            .get-involved-content,
-            .help-shape-content {
-                max-width: none;
-                margin: 0;
-                text-align: left;
+            .social-icons {
+                gap: 1.5rem;
             }
 
-            .help-shape-content {
-                text-align: left;
+            .social-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 1.3rem;
             }
 
-            .promise-content {
-                text-align: center;
+            .movement-opener {
+                font-size: 2.5rem;
             }
 
-            .vision-points {
-                gap: 2rem;
+            .bio-text {
+                font-size: 1.2rem;
             }
 
-            .vision-point {
+            .bio-highlight {
+                font-size: 1.4rem;
                 padding: 2rem;
             }
 
-            .join-button {
-                padding: 1.4rem 3rem;
-                font-size: 1.2rem;
+            .diverse-minds {
+                font-size: 2rem;
+            }
+
+            .final-question {
+                font-size: 1.8rem;
             }
         }
 
-        /* HANDWRITTEN LETTER STYLES - MUST BE AT END TO OVERRIDE OTHER RULES */
-        .about .handwritten-letter {
-            background-image: url('crumpled-paper.jpg');
-            background-size: 100% 100%;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-color: #f5f5f0;
-            padding: 3rem 4rem 3rem 4rem !important;
-            margin: 2rem auto !important;
-            border-radius: 10px;
-            transform: rotate(-1deg);
-            box-shadow: 
-                0 8px 25px rgba(0,0,0,0.15),
-                0 4px 12px rgba(0,0,0,0.1),
-                0 2px 6px rgba(0,0,0,0.08);
+        /* Why I Started This Section */
+        .about {
+            background: #fff;
+            padding: 8rem 0;
             position: relative;
-            max-width: 900px;
-            min-height: 400px;
         }
 
-        .about .handwritten-letter::before {
+        .about::before {
             content: 'STORY';
-            display: none;
+            position: absolute;
+            font-size: 12rem;
+            font-weight: 900;
+            color: rgba(210, 105, 30, 0.05);
+            top: 1rem;
+            left: 2rem;
+            z-index: 1;
+            letter-spacing: -0.05em;
+        }
+        
+        .about .section-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .story-content h2 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #000;
+            margin-bottom: 2rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .story-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 1.5rem;
         }
 
-        .about .handwritten-letter::after {
+        .story-highlight {
+            background: rgba(210, 105, 30, 0.1);
+            border-left: 4px solid #D2691E;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #000;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .founder-photo {
+            width: 100%;
+            max-width: 400px;
+            height: 500px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #666;
+            font-size: 1.2rem;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.1);
+            border: 2px solid #f0f0f0;
+            position: relative;
+            overflow: hidden;
+            margin-left: auto;
+        }
+
+        .founder-photo::before {
+            content: '📸';
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+
+        .photo-accent {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: #D2691E;
+            border-radius: 50%;
+            top: -50px;
+            right: -50px;
+            opacity: 0.1;
+        }
+
+        /* Community Initiatives Section */
+        .initiatives {
+            background: #000;
+            color: white;
+            padding: 8rem 0;
+            position: relative;
+        }
+
+        .initiatives::before {
+            content: 'INITIATIVES';
+            position: absolute;
+            font-size: 10rem;
+            font-weight: 900;
+            color: rgba(210, 105, 30, 0.08);
+            top: 1rem;
+            right: 1rem;
+            z-index: 1;
+            letter-spacing: -0.05em;
+        }
+
+        .initiatives-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .initiatives h2 {
+            font-size: 4rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 3rem;
+            text-align: center;
+            letter-spacing: -0.03em;
+        }
+
+        .initiatives-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .initiative-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(210, 105, 30, 0.2);
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .initiative-card:hover {
+            border-color: #D2691E;
+            background: rgba(210, 105, 30, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .initiative-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .initiative-card h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #D2691E;
+            margin-bottom: 1rem;
+            letter-spacing: -0.01em;
+        }
+
+        .initiative-card p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 1.5rem;
+        }
+
+        .initiative-link {
+            display: inline-block;
+            background: #D2691E;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .initiative-link:hover {
+            background: #B8641F;
+            transform: translateY(-2px);
+        }
+
+        /* Events Section */
+        .events {
+            background: #fff;
+            padding: 8rem 0;
+            position: relative;
+        }
+
+        .events::before {
+            content: 'EVENTS';
+            position: absolute;
+            font-size: 12rem;
+            font-weight: 900;
+            color: rgba(210, 105, 30, 0.05);
+            top: 1rem;
+            left: 2rem;
+            z-index: 1;
+            letter-spacing: -0.05em;
+        }
+
+        .events-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .events h2 {
+            font-size: 4rem;
+            font-weight: 800;
+            color: #000;
+            margin-bottom: 3rem;
+            text-align: center;
+            letter-spacing: -0.03em;
+        }
+
+        .next-event {
+            background: linear-gradient(135deg, #D2691E 0%, #CD853F 100%);
+            border-radius: 30px;
+            padding: 4rem;
+            text-align: center;
+            color: white;
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .next-event::before {
             content: '';
-            display: none;
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            top: -100px;
+            right: -100px;
         }
 
-        .about .handwritten-letter p {
-            font-family: 'Dancing Script', cursive !important;
-            font-size: 1.6rem !important;
-            line-height: 1.8 !important;
-            color: #2c2c2c !important;
-            font-weight: 400 !important;
-            margin-bottom: 1.5rem !important;
-            text-align: left !important;
+        .next-event h3 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
             position: relative;
             z-index: 2;
-            text-shadow: 0 1px 2px rgba(255,255,255,0.3);
         }
 
-        .about .handwritten-letter .closing {
-            font-family: 'Dancing Script', cursive !important;
-            font-size: 1.8rem !important;
-            font-weight: 400 !important;
-            color: #D2691E !important;
-            margin-top: 2rem !important;
-            text-align: center !important;
-            transform: rotate(0.5deg);
+        .event-date {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
             position: relative;
             z-index: 2;
-            text-shadow: 0 1px 2px rgba(255,255,255,0.3);
+        }
+
+        .event-details {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 2;
+        }
+
+        .event-cta {
+            background: #000;
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+            z-index: 2;
+        }
+
+        .event-cta:hover {
+            background: white;
+            color: #D2691E;
+            transform: translateY(-2px);
         }
     </style>
 </head>
@@ -629,7 +1147,7 @@
             <div class="logo"></div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="./team.html">The Team</a></li>
+                <li><a href="#events">Events</a></li>
                 <li><a href="#get-involved">Get Involved</a></li>
             </ul>
         </nav>
@@ -639,111 +1157,196 @@
     <section id="home" class="hero">
         <div class="hero-logo"></div>
         <h1>Unconventional Neuroscientists</h1>
-        <p class="tagline">[Placeholder tagline - Breaking boundaries in brain research through diverse perspectives]</p>
+        <p class="tagline">A Social Engine redefining "Neuroscientist"</p>
+        <div class="hero-ctas">
+            <a href="#events" class="primary-cta">Join Next Event</a>
+            <div class="social-links">
+                <a href="#" class="social-link" title="Follow on Twitter">𝕏</a>
+                <a href="#" class="social-link" title="Follow on LinkedIn">in</a>
+                <a href="#" class="social-link" title="Follow on Instagram">📸</a>
+            </div>
+        </div>
     </section>
 
-    <!-- Personal Story Section -->
-    <section id="story" class="section about">
-        <div class="section-content">
-            <div class="about-content">
-                <h2>My Story</h2>
-                
-                <h1 class="letter-intro">A letter from the founder</h1>
-                
-                <!-- Audio Player -->
-                <div style="margin-bottom: 2rem;">
-                    <audio controls style="width: 100%; background: #D2691E; border-radius: 10px;">
-                        <source src="Lite Saturation - Hope.mp3" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio>
-                    <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.6); margin-top: 0.5rem; font-style: italic;">Optional soundtrack while you read</p>
+    <!-- Movement Section -->
+    <section class="movement">
+        <div class="movement-content">
+            <h2 class="movement-opener">
+                We're <span class="not-typical">not your typical</span> platform.<br>
+                We're a movement.
+            </h2>
+            
+            <p class="bio-text" style="font-size: 1.1rem;">
+                A home for the outsiders, the self-taught, the mission-driven misfits who believe neuroscience is too important to be gatekept.
+            </p>
+            
+            <p class="bio-text" style="font-size: 1.1rem;">
+                Most of us didn't start in neuroscience. We arrived through a moment — a health crisis, a random paper, a conversation that stuck. Something clicked, and the brain became the mission. But without a traditional degree or "right" background, many of us still don't feel we belong.
+            </p>
+            
+            <div class="diverse-minds">
+                Some of the world's <span class="orange">brightest minds</span> are already obsessed with the brain — <span class="orange">founders, artists, engineers</span>, even if they never studied it formally.
+            </div>
+            
+            <p class="bio-text center">
+                We're building a home for them. And for you.
+            </p>
+            
+            <p class="bio-text center">
+                A platform for stories, connections, and people who learn what they need to build, discover and innovate what they believe in.
+            </p>
+            
+            <div class="final-question">
+                If that's not a scientist, what is?
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission">
+        <div class="mission-content">
+            <h2>Making Neuroscience Mainstream</h2>
+            <div class="mission-grid">
+                <div class="mission-card">
+                    <div class="number">01</div>
+                    <p>Make neuroscience mainstream</p>
                 </div>
-
-                <div class="handwritten-letter">
-                    <p>Dear reader,</p>
-                    
-                    <p>I've struggled a lot to find my place in this field. I never formally studied neuroscience, either before or after deciding to pursue it. I taught myself everything I know through textbooks, research papers, and by cold-emailing people.</p>
-                    
-                    <p>That made the journey difficult, but it also taught me things that no class ever could. Within two years of pivoting to neuroscience, I led my first research project. Along the way, I got to interact with researchers, clinicians, consumers, investors, and individuals with lived experience.</p>
-                    
-                    <p>I wore many hats: researcher, communicator, advisor. I explored several subfields including computational, cognitive, behavioral, and systems neuroscience. Life has been a roller coaster.</p>
-                    
-                    <p>But the hardest part of it all was the isolation. My story felt very different from those around me. Then I realized that almost every person I admire in neuroscience has a story like mine. That's just the nature of science. But the people who seemed to enjoy the process most had one thing in common: they had a community.</p>
-                    
-                    <div class="closing">That's why I created Unconventional Neuroscientists.</div>
-
-                    <p>Yours Sincerely,</p>
-                    <p>Nayanika</p>
+                <div class="mission-card">
+                    <div class="number">02</div>
+                    <p>Build a community where everyone belongs and feels inspired</p>
+                </div>
+                <div class="mission-card">
+                    <div class="number">03</div>
+                    <p>Break down barriers and make neuroscience accessible to all</p>
+                </div>
+                <div class="mission-card">
+                    <div class="number">04</div>
+                    <p>Challenge the narrative that you need traditional credentials to contribute</p>
+                </div>
+                <div class="mission-card">
+                    <div class="number">05</div>
+                    <p>Direct innovative minds toward neuroscience breakthroughs</p>
+                </div>
+                <div class="mission-card">
+                    <div class="number">06</div>
+                    <p>Unite diverse backgrounds entering neuroscience with neuroscientists branching into other fields</p>
+                </div>
+                <div class="mission-card">
+                    <div class="number">07</div>
+                    <p>Showcase brilliant minds solving the brain - whether they studied it formally or discovered it later</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Community Promise Section -->
-    <section class="section community-promise">
+    <!-- Why I Started This Section -->
+    <section id="about" class="about">
         <div class="section-content">
-            <div class="promise-content">
-                <h2>You Don't Have to Do It Alone</h2>
-                <p>I want to give you the kind of community I didn't have. Neuroscience isn't something people naturally fall into. It's almost always a nonlinear journey. But having people around you makes it okay when things don't make sense.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Vision Section -->
-    <section class="section vision">
-        <div class="section-content">
-            <div class="vision-content">
-                <h2>Our Vision</h2>
+            <div class="story-content">
+                <h2>Why I Started This</h2>
                 
-                <div class="vision-points">
-                    <div class="vision-point">
-                        <h3>Safe Spaces for Real Talk</h3>
-                        <p>Large communities often don't feel intimate enough to share personal struggles. I want to change that. In this space, you should feel comfortable having a bad day, facing a tough decision, or feeling stuck, and being able to talk about it openly.</p>
-                    </div>
-                    
-                    <div class="vision-point">
-                        <h3>Discover Your Unique Path</h3>
-                        <p>Neuroscience is an enormous field. No one can know or do everything. This community is a place to explore what a neuroscience career means to you, based on your strengths, your interests, and your pace.</p>
-                    </div>
-                    
-                    <div class="vision-point">
-                        <h3>Innovate Beyond Boundaries</h3>
-                        <p>Let's build together. Whether you're interested in tools, ideas, content, or collaborations, this is a space to experiment and innovate at the intersection of disciplines and lived experiences.</p>
-                    </div>
+                <p class="story-text">I never formally studied neuroscience, yet here I am. I taught myself everything through textbooks, research papers, and countless cold emails to researchers.</p>
+                
+                <p class="story-text">The journey was isolating. My unconventional path felt different from everyone around me. But then I realized something profound: almost every neuroscientist I admire has a similar story.</p>
+                
+                <div class="story-highlight">
+                    The people who thrive in neuroscience aren't just the ones with traditional paths - they're the ones with community.
+                </div>
+                
+                <p class="story-text">Within two years of pivoting to neuroscience, I led my first research project. I wore many hats: researcher, communicator, advisor. I explored computational, cognitive, behavioral, and systems neuroscience.</p>
+                
+                <p class="story-text">That's when I knew I had to create the community I wished I had when I started - a place where unconventional minds can find their tribe and reshape neuroscience together.</p>
+                
+                <div style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid rgba(210, 105, 30, 0.2);">
+                    <p style="font-style: italic; color: #666; font-size: 1.1rem;">— Nayanika Biswas, Founder</p>
+                </div>
+            </div>
+            
+            <div class="founder-photo">
+                <div class="photo-accent"></div>
+                <div>Nayanika's Photo</div>
+                <div style="font-size: 0.9rem; margin-top: 1rem; opacity: 0.7;">Professional headshot placeholder</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Initiatives Section -->
+    <section class="initiatives">
+        <div class="initiatives-content">
+            <h2>Our Community Programs</h2>
+            <div class="initiatives-grid">
+                <div class="initiative-card">
+                    <span class="initiative-icon">🧠</span>
+                    <h3>Monthly Meetups</h3>
+                    <p>Join us every first Tuesday of the month for deep conversations, networking, and collaborative discussions about the future of neuroscience.</p>
+                    <a href="#events" class="initiative-link">Join Next Meetup</a>
+                </div>
+                
+                <div class="initiative-card">
+                    <span class="initiative-icon">📰</span>
+                    <h3>Current News Monday</h3>
+                    <p>Weekly discussions breaking down the latest neuroscience research, trends, and breakthroughs that matter to our community.</p>
+                    <a href="#" class="initiative-link">Follow Updates</a>
+                </div>
+                
+                <div class="initiative-card">
+                    <span class="initiative-icon">🐦</span>
+                    <h3>Twitter Summer Courses</h3>
+                    <p>Interactive learning experiences and educational threads that make complex neuroscience concepts accessible to everyone.</p>
+                    <a href="#" class="initiative-link">Follow on Twitter</a>
+                </div>
+                
+                <div class="initiative-card">
+                    <span class="initiative-icon">📺</span>
+                    <h3>Weekly Series</h3>
+                    <p>Regular content series featuring unconventional career paths, innovative research approaches, and community spotlights.</p>
+                    <a href="#" class="initiative-link">Watch Series</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Monthly Meetups Section -->
-    <section id="meetups" class="meetups">
-        <div class="section-content">
-            <div class="meetup-card">
-                <h2>Monthly Meetups</h2>
-                <p>Come join us on first Tuesdays of every month</p>
+    <!-- Events Section -->
+    <section id="events" class="events">
+        <div class="events-content">
+            <h2>Upcoming Events</h2>
+            
+            <div class="next-event">
+                <h3>Monthly Meetup</h3>
+                <div class="event-date">Tuesday, August 5th, 2025</div>
+                <div class="event-details">11:00 AM EST • Discord Voice Channel</div>
+                <p style="margin-bottom: 2rem;">Topic: Finding a Research Assistantship with an unconventional Background</p>
+                <a href="#" class="event-cta">Register Now</a>
+            </div>
+            
+            <div style="text-align: center; color: #666;">
+                <p style="font-size: 1.1rem; margin-bottom: 1rem;">Don't miss our regular programming:</p>
+                <p style="font-size: 1rem;">📰 Current News Monday • 🐦 Twitter Summer Courses • 📺 Weekly Series</p>
             </div>
         </div>
     </section>
 
-    <!-- Get Involved Section -->
+    <!-- Join the Movement Section -->
     <section id="get-involved" class="section get-involved">
         <div class="section-content">
             <div class="get-involved-content">
-                <h2>Join the Community</h2>
-                <p class="community-tagline">What are you curious about, struggling with, or hoping to explore? Let's get to know each other better.</p>
-                <a href="#" class="join-button">Join Us</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Help Shape Section -->
-    <section id="help-shape" class="section help-shape">
-        <div class="section-content">
-            <div class="help-shape-content">
-                <h2>Help Shape the Community</h2>
-                <p>Your input matters! Help us build a community that truly serves unconventional neuroscientists. Share your ideas, needs, and vision for what this community could become.</p>
-                <p>Whether you're interested in interdisciplinary research, alternative career paths, innovative methodologies, or building bridges between neuroscience and other fields - we want to hear from you.</p>
-                <a href="#" class="cta-button">Share Your Ideas</a>
+                <h2>Join the Movement</h2>
+                <p class="community-tagline">Ready to reshape neuroscience? Connect with us across all platforms and become part of the change.</p>
+                
+                <div class="social-icons" style="margin: 3rem 0;">
+                    <a href="#" class="social-icon" title="Join Discord">
+                        💬
+                    </a>
+                    <a href="#" class="social-icon" title="Follow on Twitter">
+                        𝕏
+                    </a>
+                    <a href="#" class="social-icon" title="Follow on LinkedIn">
+                        💼
+                    </a>
+                    <a href="#" class="social-icon" title="Follow on Instagram">
+                        📸
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -751,7 +1354,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <a href="#" class="footer-discord">Join Discord</a>
+            <p style="color: rgba(255,255,255,0.7); text-align: center; width: 100%;">© 2025 Unconventional Neuroscientists</p>
         </div>
     </footer>
 
