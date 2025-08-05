@@ -341,6 +341,19 @@
             line-height: 1.6;
             color: rgba(255, 255, 255, 0.9);
         }
+        
+        .mission-ps {
+            text-align: center;
+            margin-top: 4rem;
+        }
+        
+        .mission-ps p {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #D2691E;
+            margin: 0;
+            letter-spacing: -0.01em;
+        }
 
         /* Section Styles */
         .section {
@@ -808,7 +821,7 @@
             }
             
             .about .section-content {
-                gap: 3rem;
+                gap: 0rem;
             }
 
             .get-involved h2 {
@@ -889,11 +902,10 @@
             position: relative;
             z-index: 2;
             max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
+            /* margin: 0 auto; */
+            /* padding: 0 2rem; */
             display: flex;
             flex-direction: column;
-            gap: 4rem;
         }
         
         .story-content {
@@ -914,12 +926,16 @@
             justify-content: center;
             align-items: center;
             width: 100%;
+            margin: -6rem 0 0 0;
+            padding: 0;
         }
         
         .envelope-container {
             display: flex;
             justify-content: center;
             align-items: center;
+            margin: 0;
+            padding: 0;
         }
 
         .animated-text-container {
@@ -1002,13 +1018,12 @@
             height: auto;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border-radius: 10px;
+            filter: drop-shadow(0 10px 30px rgba(0,0,0,0.1));
         }
 
         .envelope:hover, .envelope.highlight {
             transform: translateY(-8px);
-            box-shadow: 0 25px 50px rgba(210, 105, 30, 0.2);
+            filter: drop-shadow(0 25px 50px rgba(210, 105, 30, 0.2));
         }
 
         /* Modal Styles */
@@ -1389,37 +1404,22 @@
     <!-- Mission Section -->
     <section class="mission">
         <div class="mission-content">
-            <h2>Making Neuroscience Mainstream</h2>
+            <h2>Our Outrageous Mission</h2>
             <div class="mission-grid">
                 <div class="mission-card">
-                    <div class="number">01</div>
-                    <p>Make neuroscience mainstream</p>
+                    <div class="number">Inclusivity</div>
+                    <p>Challenge the narrative that you need traditional credentials to contribute.</p>
                 </div>
                 <div class="mission-card">
-                    <div class="number">02</div>
-                    <p>Build a community where everyone belongs and feels inspired</p>
+                    <div class="number">Innovation</div>
+                    <p>Bring together brilliant minds from all backgrounds to collaborate, and create the next generation of neuroscience breakthroughs.</p>
                 </div>
                 <div class="mission-card">
-                    <div class="number">03</div>
-                    <p>Break down barriers and make neuroscience accessible to all</p>
-                </div>
-                <div class="mission-card">
-                    <div class="number">04</div>
-                    <p>Challenge the narrative that you need traditional credentials to contribute</p>
-                </div>
-                <div class="mission-card">
-                    <div class="number">05</div>
-                    <p>Direct innovative minds toward neuroscience breakthroughs</p>
-                </div>
-                <div class="mission-card">
-                    <div class="number">06</div>
-                    <p>Unite diverse backgrounds entering neuroscience with neuroscientists branching into other fields</p>
-                </div>
-                <div class="mission-card">
-                    <div class="number">07</div>
-                    <p>Showcase brilliant minds solving the brain - whether they studied it formally or discovered it later</p>
+                    <div class="number">Accessibility</div>
+                    <p>Make neuroscience radically accessible, understandable, and open to anyone who wants to learn, contribute or explore</p>
                 </div>
             </div>
+            
         </div>
     </section>
 
@@ -1440,7 +1440,7 @@
             
             <div class="letter-section">
                 <div class="envelope-container">
-                    <img src="envelope.png" alt="Letter from founder" class="envelope" onclick="openLetter()">
+                    <img src="envelope_and_nayanika2.png" alt="Letter from founder" class="envelope" onclick="openLetter()">
                 </div>
             </div>
         </div>
@@ -1460,15 +1460,15 @@
                 
                 <div class="initiative-card">
                     <!-- <span class="initiative-icon">📰</span> -->
-                    <h3>Current News Monday</h3>
+                    <h3>The Unconventional Weekly</h3>
                     <p>Weekly discussions breaking down the latest neuroscience research, trends, and breakthroughs that matter to our community.</p>
                     <a href="https://www.linkedin.com/company/unconventional-neuroscientists/" class="initiative-link">Follow Updates</a>
                 </div>
                 
                 <div class="initiative-card">
                     <!-- <span class="initiative-icon">🐦</span> -->
-                    <h3>Twitter Summer Courses</h3>
-                    <p>Interactive learning experiences and educational threads that make complex neuroscience concepts accessible to everyone.</p>
+                    <h3>Neuro Course Board</h3>
+                    <p>A live bulletin for all the latest summer schools, trainings, and workshops in neuroscience.</p>
                     <a href="https://x.com/BrainCourses" class="initiative-link">Follow on Twitter</a>
                 </div>
                 
@@ -1492,7 +1492,7 @@
                 <div class="event-date">Tuesday, August 5th, 2025</div>
                 <div class="event-details">11:00 AM EST • Discord Voice Channel</div>
                 <p style="margin-bottom: 2rem;">Topic: Finding a Research Assistantship with an Unconventional Background</p>
-                <a href="#" class="event-cta">Register Now</a>
+                <a href="https://discord.gg/vVK9NcXKk5" class="event-cta">Register Now</a>
             </div>
         </div>
     </section>
