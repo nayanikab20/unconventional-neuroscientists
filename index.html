@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unconventional Neuroscientists</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -44,7 +44,7 @@
         .logo {
             height: 50px;
             width: 50px;
-            background-image: url('uneuro_logo_logo_zoom.png');
+            background-image: url('uneuro_logo_logo_clear_zoom.png');
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
@@ -78,7 +78,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(135deg, #D2691E 0%, #CD853F 100%);
+            background: #000;
             text-align: center;
             padding: 0 2rem;
             position: relative;
@@ -87,7 +87,7 @@
         .hero-logo {
             width: 200px;
             height: 200px;
-            background-image: url('uneuro_logo_logo_zoom.png');
+            background-image: url('uneuro_logo_logo_clear_zoom.png');
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
@@ -111,8 +111,8 @@
         }
 
         .tagline {
-            font-size: 1.5rem;
-            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.7rem;
+            color: #D2691E;
             max-width: 600px;
             margin: 0 auto 3rem;
             font-weight: 400;
@@ -127,20 +127,20 @@
         }
 
         .primary-cta {
-            background: #000;
-            color: white;
-            padding: 1.2rem 2.5rem;
+            background: white;
+            color: #000;
+            padding: 1.0rem 1.2rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: 0.8rem;
             transition: all 0.3s ease;
-            border: 2px solid #000;
+            border: 2px solid white;
         }
 
         .primary-cta:hover {
-            background: white;
-            color: #000;
+            background: #000;
+            color: white;
             transform: translateY(-2px);
         }
 
@@ -167,16 +167,20 @@
             justify-content: center;
         }
 
+        .social-link img {
+            width: 20px;
+            height: 20px;
+        }
+
         .social-link:hover {
             background: white;
-            color: #D2691E;
             transform: translateY(-2px);
         }
 
         /* Movement Section */
         .movement {
             background: #fff;
-            padding: 8rem 0;
+            padding: 6rem 0;
             position: relative;
             overflow: hidden;
         }
@@ -271,7 +275,7 @@
         .mission {
             background: #000;
             color: white;
-            padding: 8rem 0;
+            padding: 6rem 0;
             position: relative;
         }
 
@@ -340,7 +344,7 @@
 
         /* Section Styles */
         .section {
-            padding: 8rem 0;
+            padding: 6rem 0;
             position: relative;
             /* Remove white padding - extend to full width */
             max-width: none;
@@ -528,7 +532,7 @@
         /* Get Involved Section */
         .get-involved {
             background: #111;
-            padding: 4rem 0;
+            padding: 6rem 0;
             position: relative;
             /* Extend background to full screen width */
             max-width: none !important;
@@ -562,16 +566,16 @@
             font-size: 4rem;
             font-weight: 800;
             margin-bottom: 2rem;
-            text-align: left;
+            text-align: center;
             letter-spacing: -0.03em;
             white-space: nowrap;
         }
 
         .community-tagline {
-            font-size: 1.2rem;
+            font-size: 1.0rem;
             color: rgba(255, 255, 255, 0.8);
             margin-bottom: 3rem;
-            text-align: left;
+            text-align: center;
             line-height: 1.6;
         }
 
@@ -597,9 +601,13 @@
             background: transparent;
         }
 
+        .social-icon img {
+            width: 24px;
+            height: 24px;
+        }
+
         .social-icon:hover {
             border-color: #D2691E;
-            color: #D2691E;
             background: rgba(210, 105, 30, 0.1);
             transform: translateY(-2px);
         }
@@ -770,16 +778,6 @@
                 gap: 1.5rem;
             }
 
-            .about .section-content {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-
-            .founder-photo {
-                margin: 0 auto;
-                max-width: 300px;
-                height: 400px;
-            }
 
             .initiatives-grid {
                 grid-template-columns: 1fr;
@@ -807,6 +805,10 @@
             .hero-logo::after {
                 width: 90px;
                 height: 12px;
+            }
+            
+            .about .section-content {
+                gap: 3rem;
             }
 
             .get-involved h2 {
@@ -844,12 +846,30 @@
             .final-question {
                 font-size: 1.8rem;
             }
+
+            .typewriter-text {
+                font-size: 1.4rem;
+            }
+
+            .squiggly-underline {
+                width: 280px;
+            }
+
+            .curvy-arrow {
+                width: 80px;
+                right: -50px;
+                top: 50px;
+            }
+
+            .envelope {
+                width: 480px;
+            }
         }
 
         /* Why I Started This Section */
         .about {
             background: #fff;
-            padding: 8rem 0;
+            padding: 6rem 0;
             position: relative;
         }
 
@@ -871,36 +891,194 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+            display: flex;
+            flex-direction: column;
             gap: 4rem;
-            align-items: center;
+        }
+        
+        .story-content {
+            align-self: flex-start;
         }
         
         .story-content h2 {
             font-size: 3.5rem;
             font-weight: 800;
             color: #000;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
             letter-spacing: -0.02em;
+            text-align: left;
         }
         
-        .story-text {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            color: #333;
-            margin-bottom: 1.5rem;
+        .letter-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        
+        .envelope-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        .story-highlight {
-            background: rgba(210, 105, 30, 0.1);
-            border-left: 4px solid #D2691E;
-            padding: 1.5rem;
-            margin: 2rem 0;
-            font-size: 1.3rem;
+        .animated-text-container {
+            margin-bottom: 3rem;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            max-width: fit-content;
+        }
+
+        .typewriter-text {
+            font-family: 'Caveat', cursive;
+            font-size: 1.8rem;
+            color: #D2691E;
             font-weight: 600;
-            color: #000;
-            border-radius: 0 10px 10px 0;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid #D2691E;
+            width: 0;
+            animation: typewriter 3s steps(28) 0.5s forwards, blink 0.75s step-end infinite;
+        }
+        
+        @keyframes typewriter {
+            from { width: 0; }
+            to { width: 100%; }
+       }
+       
+
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+
+        .squiggly-underline {
+            margin-top: 0.5rem;
+            opacity: 0;
+            animation: fadeInUnderline 0.5s ease 3.5s forwards;
+        }
+
+        @keyframes fadeInUnderline {
+            to {opacity: 1; }
+        }
+
+        .squiggly-path {
+            stroke: #D2691E;
+            stroke-width: 3;
+            fill: none;
+            stroke-linecap: round;
+            stroke-dasharray: 300;
+            stroke-dashoffset: 300;
+            animation: drawSquiggle 1s ease 3.5s forwards;
+        }
+
+        @keyframes drawSquiggle {
+            to { stroke-dashoffset: 0; }
+        }
+
+        .curvy-arrow {
+            position: absolute;
+            width: 120px;
+            height: auto;
+            top: 60px;
+            right: -80px;
+            opacity: 0;
+            transform: rotate(45deg);
+            animation: arrowAppear 0.5s ease 4.5s forwards, arrowPulse 2s ease-in-out 5s infinite;
+        }
+
+        @keyframes arrowAppear {
+            to {opacity: 1; }
+        }
+
+        @keyframes arrowPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .envelope {
+            width: 600px;
+            height: auto;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+
+        .envelope:hover, .envelope.highlight {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(210, 105, 30, 0.2);
+        }
+
+        /* Modal Styles */
+        .letter-modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .letter-content {
+            position: relative;
+            background: #f8f5f0;
+            margin: 5% auto;
+            padding: 3rem;
+            width: 80%;
+            max-width: 700px;
+            border-radius: 15px;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+            max-height: 80vh;
+            overflow-y: auto;
+            animation: slideIn 0.4s ease;
+        }
+
+        .close-letter {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #666;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close-letter:hover {
+            color: #D2691E;
+        }
+
+        .letter-text {
+            font-family: 'Caveat', cursive;
+            font-size: 1.5rem;
+            line-height: 1.7;
+            color: #333;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .letter-signature {
+            font-family: 'Caveat', cursive;
+            font-size: 1.7rem;
+            color: #D2691E;
+            text-align: right;
+            margin-top: 2rem;
+            font-weight: 600;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
 
         .founder-photo {
@@ -944,7 +1122,7 @@
         .initiatives {
             background: #000;
             color: white;
-            padding: 8rem 0;
+            padding: 6rem 0;
             position: relative;
         }
 
@@ -1040,7 +1218,7 @@
         /* Events Section */
         .events {
             background: #fff;
-            padding: 8rem 0;
+            padding: 6rem 0;
             position: relative;
         }
 
@@ -1157,13 +1335,19 @@
     <section id="home" class="hero">
         <div class="hero-logo"></div>
         <h1>Unconventional Neuroscientists</h1>
-        <p class="tagline">A Social Engine redefining "Neuroscientist"</p>
+        <p class="tagline">The Social Engine Redefining <em>"Neuroscientist"</em></p>
         <div class="hero-ctas">
             <a href="#events" class="primary-cta">Join Next Event</a>
             <div class="social-links">
-                <a href="#" class="social-link" title="Follow on Twitter">𝕏</a>
-                <a href="#" class="social-link" title="Follow on LinkedIn">in</a>
-                <a href="#" class="social-link" title="Follow on Instagram">📸</a>
+                <a href="https://x.com/UnconvNeurosci" class="social-link" title="Follow on Twitter">
+                    <img src="X-bw.png" alt="Twitter/X">
+                </a>
+                <a href="https://www.linkedin.com/company/unconventional-neuroscientists/" class="social-link" title="Follow on LinkedIn">
+                    <img src="linkedin-bw.png" alt="LinkedIn">
+                </a>
+                <a href="https://www.instagram.com/unconventional.neuroscientist" class="social-link" title="Follow on Instagram">
+                    <img src="instagram-bw.png" alt="Instagram">
+                </a>
             </div>
         </div>
     </section>
@@ -1245,27 +1429,19 @@
             <div class="story-content">
                 <h2>Why I Started This</h2>
                 
-                <p class="story-text">I never formally studied neuroscience, yet here I am. I taught myself everything through textbooks, research papers, and countless cold emails to researchers.</p>
-                
-                <p class="story-text">The journey was isolating. My unconventional path felt different from everyone around me. But then I realized something profound: almost every neuroscientist I admire has a similar story.</p>
-                
-                <div class="story-highlight">
-                    The people who thrive in neuroscience aren't just the ones with traditional paths - they're the ones with community.
-                </div>
-                
-                <p class="story-text">Within two years of pivoting to neuroscience, I led my first research project. I wore many hats: researcher, communicator, advisor. I explored computational, cognitive, behavioral, and systems neuroscience.</p>
-                
-                <p class="story-text">That's when I knew I had to create the community I wished I had when I started - a place where unconventional minds can find their tribe and reshape neuroscience together.</p>
-                
-                <div style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid rgba(210, 105, 30, 0.2);">
-                    <p style="font-style: italic; color: #666; font-size: 1.1rem;">— Nayanika Biswas, Founder</p>
+                <div class="animated-text-container">
+                    <div class="typewriter-text">Read a letter from the founder</div>
+                    <svg class="squiggly-underline" width="320" height="20" viewBox="0 0 320 20">
+                        <path class="squiggly-path" d="M5,15 Q25,5 45,15 T85,15 Q105,5 125,15 T165,15 Q185,5 205,15 T245,15 Q265,5 285,15 T315,15"/>
+                    </svg>
+                    <img src="6ceecafe-3358-4706-8090-83ec634657d8.jpg" alt="Arrow pointing to envelope" class="curvy-arrow">
                 </div>
             </div>
             
-            <div class="founder-photo">
-                <div class="photo-accent"></div>
-                <div>Nayanika's Photo</div>
-                <div style="font-size: 0.9rem; margin-top: 1rem; opacity: 0.7;">Professional headshot placeholder</div>
+            <div class="letter-section">
+                <div class="envelope-container">
+                    <img src="envelope.png" alt="Letter from founder" class="envelope" onclick="openLetter()">
+                </div>
             </div>
         </div>
     </section>
@@ -1276,32 +1452,32 @@
             <h2>Our Community Programs</h2>
             <div class="initiatives-grid">
                 <div class="initiative-card">
-                    <span class="initiative-icon">🧠</span>
+                    <!-- <span class="initiative-icon">🧠</span> -->
                     <h3>Monthly Meetups</h3>
                     <p>Join us every first Tuesday of the month for deep conversations, networking, and collaborative discussions about the future of neuroscience.</p>
                     <a href="#events" class="initiative-link">Join Next Meetup</a>
                 </div>
                 
                 <div class="initiative-card">
-                    <span class="initiative-icon">📰</span>
+                    <!-- <span class="initiative-icon">📰</span> -->
                     <h3>Current News Monday</h3>
                     <p>Weekly discussions breaking down the latest neuroscience research, trends, and breakthroughs that matter to our community.</p>
-                    <a href="#" class="initiative-link">Follow Updates</a>
+                    <a href="https://www.linkedin.com/company/unconventional-neuroscientists/" class="initiative-link">Follow Updates</a>
                 </div>
                 
                 <div class="initiative-card">
-                    <span class="initiative-icon">🐦</span>
+                    <!-- <span class="initiative-icon">🐦</span> -->
                     <h3>Twitter Summer Courses</h3>
                     <p>Interactive learning experiences and educational threads that make complex neuroscience concepts accessible to everyone.</p>
-                    <a href="#" class="initiative-link">Follow on Twitter</a>
+                    <a href="https://x.com/BrainCourses" class="initiative-link">Follow on Twitter</a>
                 </div>
                 
-                <div class="initiative-card">
+                <!-- <div class="initiative-card">
                     <span class="initiative-icon">📺</span>
                     <h3>Weekly Series</h3>
                     <p>Regular content series featuring unconventional career paths, innovative research approaches, and community spotlights.</p>
                     <a href="#" class="initiative-link">Watch Series</a>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -1315,13 +1491,8 @@
                 <h3>Monthly Meetup</h3>
                 <div class="event-date">Tuesday, August 5th, 2025</div>
                 <div class="event-details">11:00 AM EST • Discord Voice Channel</div>
-                <p style="margin-bottom: 2rem;">Topic: Finding a Research Assistantship with an unconventional Background</p>
+                <p style="margin-bottom: 2rem;">Topic: Finding a Research Assistantship with an Unconventional Background</p>
                 <a href="#" class="event-cta">Register Now</a>
-            </div>
-            
-            <div style="text-align: center; color: #666;">
-                <p style="font-size: 1.1rem; margin-bottom: 1rem;">Don't miss our regular programming:</p>
-                <p style="font-size: 1rem;">📰 Current News Monday • 🐦 Twitter Summer Courses • 📺 Weekly Series</p>
             </div>
         </div>
     </section>
@@ -1331,25 +1502,50 @@
         <div class="section-content">
             <div class="get-involved-content">
                 <h2>Join the Movement</h2>
-                <p class="community-tagline">Ready to reshape neuroscience? Connect with us across all platforms and become part of the change.</p>
+                <p class="community-tagline">Connect with us across all platforms and become part of the change.</p>
                 
                 <div class="social-icons" style="margin: 3rem 0;">
-                    <a href="#" class="social-icon" title="Join Discord">
-                        💬
+                    <a href="https://discord.gg/vVK9NcXKk5" class="social-icon" title="Join Discord">
+                        <img src="discord-bw.png" alt="Discord">
                     </a>
-                    <a href="#" class="social-icon" title="Follow on Twitter">
-                        𝕏
+                    <a href="https://x.com/UnconvNeurosci" class="social-icon" title="Follow on Twitter">
+                        <img src="X-bw.png" alt="Twitter/X">
                     </a>
-                    <a href="#" class="social-icon" title="Follow on LinkedIn">
-                        💼
+                    <a href="https://www.linkedin.com/company/unconventional-neuroscientists/" class="social-icon" title="Follow on LinkedIn">
+                        <img src="linkedin-bw.png" alt="LinkedIn">
                     </a>
-                    <a href="#" class="social-icon" title="Follow on Instagram">
-                        📸
+                    <a href="https://www.instagram.com/unconventional.neuroscientist" class="social-icon" title="Follow on Instagram">
+                        <img src="instagram-bw.png" alt="Instagram">
                     </a>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Letter Modal -->
+    <div id="letterModal" class="letter-modal">
+        <div class="letter-content">
+            <span class="close-letter" onclick="closeLetter()">&times;</span>
+            <h3 style="font-family: 'Caveat', cursive; font-size: 2.2rem; color: #D2691E; text-align: center; margin-bottom: 2rem; font-weight: 600;">A Letter from the Founder</h3>
+            
+            <p class="letter-text">Dear reader,</p>
+            
+            <p class="letter-text">I've struggled a lot to find my place in this field. I never formally studied neuroscience, either before or after deciding to pursue it. I taught myself everything I know through textbooks, research papers, and by cold-emailing people.</p>
+            
+            <p class="letter-text">That made the journey difficult, but it also taught me things that no class ever could. Within two years of pivoting to neuroscience, I led my first research project. Along the way, I got to interact with researchers, clinicians, consumers, investors, and individuals with lived experience.</p>
+            
+            <p class="letter-text">I wore many hats: researcher, communicator, advisor. I explored several subfields including computational, cognitive, behavioral, and systems neuroscience. Life has been a roller coaster.</p>
+            
+            <p class="letter-text">But the hardest part of it all was the isolation. My story felt very different from those around me. Then I realized that almost every person I admire in neuroscience has a story like mine. That's just the nature of science. But the people who seemed to enjoy the process most had one thing in common: they had a community.</p>
+            
+            <p class="letter-text" style="text-align: center; font-size: 1.6rem; color: #D2691E; font-weight: 600; margin: 2rem 0;">That's why I created Unconventional Neuroscientists.</p>
+            
+            <div class="letter-signature">
+                Love,<br>
+                Nayanika
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -1381,6 +1577,45 @@
             } else {
                 header.style.background = 'rgba(17, 17, 17, 0.95)';
             }
+        });
+
+        // Letter Modal Functions
+        function openLetter() {
+            document.getElementById('letterModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLetter() {
+            document.getElementById('letterModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('letterModal');
+            if (event.target === modal) {
+                closeLetter();
+            }
+        }
+
+        // Simple hover interactions for envelope
+        document.addEventListener('DOMContentLoaded', function() {
+            const envelope = document.querySelector('.envelope');
+            const arrowImg = document.querySelector('.curvy-arrow');
+            const typewriterText = document.querySelector('.typewriter-text');
+            
+            // Add hover interactions
+            [arrowImg, typewriterText].forEach(element => {
+                if (element) {
+                    element.addEventListener('mouseenter', () => {
+                        envelope.classList.add('highlight');
+                    });
+                    
+                    element.addEventListener('mouseleave', () => {
+                        envelope.classList.remove('highlight');
+                    });
+                }
+            });
         });
     </script>
 </body>
