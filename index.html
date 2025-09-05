@@ -1254,7 +1254,7 @@
         .events-content {
             position: relative;
             z-index: 2;
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 0 2rem;
         }
@@ -1268,18 +1268,82 @@
             letter-spacing: -0.03em;
         }
 
+        .events-scroll-container {
+            overflow-x: auto;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .events-scroll-container::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .events-scroll-container::-webkit-scrollbar-track {
+            background: rgba(210, 105, 30, 0.1);
+            border-radius: 10px;
+        }
+
+        .events-scroll-container::-webkit-scrollbar-thumb {
+            background: #D2691E;
+            border-radius: 10px;
+        }
+
+        .events-scroll-container::-webkit-scrollbar-thumb:hover {
+            background: #B8641F;
+        }
+
+        .events-grid {
+            display: flex;
+            gap: 2rem;
+            padding: 1rem 0;
+            min-width: min-content;
+        }
+
         .next-event {
+            min-width: 350px;
+            height: 400px;
+            flex-shrink: 0;
+            perspective: 1000px;
+            cursor: pointer;
+        }
+
+        .event-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+            border-radius: 30px;
+        }
+
+        .next-event.flipped .event-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .event-card-front,
+        .event-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
             background: linear-gradient(135deg, #D2691E 0%, #CD853F 100%);
             border-radius: 30px;
-            padding: 4rem;
-            text-align: center;
+            padding: 3rem;
             color: white;
-            margin-bottom: 3rem;
-            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             overflow: hidden;
         }
 
-        .next-event::before {
+        .event-card-back {
+            transform: rotateY(180deg);
+            background: linear-gradient(135deg, #111 0%, #333 100%);
+            border: 2px solid #D2691E;
+        }
+
+        .event-card-front::before {
             content: '';
             position: absolute;
             width: 200px;
@@ -1288,6 +1352,29 @@
             border-radius: 50%;
             top: -100px;
             right: -100px;
+        }
+
+        .event-summary {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .event-summary h4 {
+            color: #D2691E;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .flip-hint {
+            position: absolute;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.9rem;
+            opacity: 0.7;
+            font-style: italic;
         }
 
         .next-event h3 {
@@ -1409,6 +1496,12 @@
             background-size: contain;
             background-position: center top;
         }
+        
+        .team-photo.avneet {
+            background-image: url('avneet_headshot.png');
+            background-size: cover;
+            background-position: center;
+        }
 
         .team-info {
             flex: 1;
@@ -1434,26 +1527,29 @@
         .team-linkedin {
             width: 35px;
             height: 35px;
-            background: #0077B5;
-            border-radius: 50%;
+            background: transparent;
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
             text-decoration: none;
             transition: all 0.3s ease;
             flex-shrink: 0;
+            border: 2px solid rgba(255, 255, 255, 0.3);
         }
 
         .team-linkedin:hover {
-            background: #005885;
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.6);
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 119, 181, 0.3);
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
         }
 
         .team-linkedin img {
-            width: 18px;
-            height: 18px;
-            filter: brightness(0) invert(1);
+            width: 20px;
+            height: 20px;
+            filter: none;
+            object-fit: contain;
         }
     </style>
 </head>
@@ -1611,12 +1707,92 @@
         <div class="events-content">
             <h2>Upcoming Events</h2>
             
-            <div class="next-event">
-                <h3>Monthly Meetup</h3>
-                <div class="event-date">Tuesday, August 5th, 2025</div>
-                <div class="event-details">11:00 AM EST • Discord Voice Channel</div>
-                <p style="margin-bottom: 2rem;">Topic: Finding a Research Assistantship with an Unconventional Background</p>
-                <a href="https://discord.gg/vVK9NcXKk5" class="event-cta">Register Now</a>
+            <div class="events-scroll-container">
+                <div class="events-grid">
+                    <div class="next-event" onclick="flipCard(this)">
+                        <div class="event-card-inner">
+                            <div class="event-card-front">
+                                <h3>Monthly Meetup</h3>
+                                <div class="event-date">Tuesday, August 5th, 2025</div>
+                                <div class="event-details">11:00 AM EST • Discord Voice Channel</div>
+                                <p style="margin-bottom: 2rem;">Topic: Finding a Research Assistantship with an Unconventional Background</p>
+                                <a href="https://discord.gg/vVK9NcXKk5" class="event-cta" onclick="event.stopPropagation()">Register Now</a>
+                                <div class="flip-hint">Click to see details</div>
+                            </div>
+                            <div class="event-card-back">
+                                <div class="event-summary">
+                                    <h4>Event Summary</h4>
+                                    <p>Join us for our monthly community meetup where we discuss practical strategies for entering neuroscience research without traditional credentials. This session will feature guest speakers who successfully transitioned into neuroscience from diverse backgrounds.</p>
+                                    <p><strong>What to expect:</strong> Interactive Q&A, networking opportunities, and actionable advice for finding research positions.</p>
+                                </div>
+                                <div class="flip-hint">Click to flip back</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="next-event" onclick="flipCard(this)">
+                        <div class="event-card-inner">
+                            <div class="event-card-front">
+                                <h3>Weekly Neuro Discussion</h3>
+                                <div class="event-date">Friday, August 8th, 2025</div>
+                                <div class="event-details">2:00 PM EST • Discord Voice Channel</div>
+                                <p style="margin-bottom: 2rem;">Topic: Latest Breakthroughs in Brain-Computer Interfaces</p>
+                                <a href="https://discord.gg/vVK9NcXKk5" class="event-cta" onclick="event.stopPropagation()">Join Discussion</a>
+                                <div class="flip-hint">Click to see details</div>
+                            </div>
+                            <div class="event-card-back">
+                                <div class="event-summary">
+                                    <h4>Discussion Details</h4>
+                                    <p>Dive deep into cutting-edge brain-computer interface research. We'll explore recent papers, discuss implications for the field, and examine potential applications in healthcare and beyond.</p>
+                                    <p><strong>Format:</strong> Casual discussion with optional paper pre-reading. All backgrounds welcome - no prior BCI knowledge required!</p>
+                                </div>
+                                <div class="flip-hint">Click to flip back</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="next-event" onclick="flipCard(this)">
+                        <div class="event-card-inner">
+                            <div class="event-card-front">
+                                <h3>Career Panel</h3>
+                                <div class="event-date">Saturday, August 16th, 2025</div>
+                                <div class="event-details">1:00 PM EST • Zoom Webinar</div>
+                                <p style="margin-bottom: 2rem;">Topic: Non-Traditional Paths into Neuroscience Research</p>
+                                <a href="https://discord.gg/vVK9NcXKk5" class="event-cta" onclick="event.stopPropagation()">Register Now</a>
+                                <div class="flip-hint">Click to see details</div>
+                            </div>
+                            <div class="event-card-back">
+                                <div class="event-summary">
+                                    <h4>Panel Overview</h4>
+                                    <p>Hear from 4 successful neuroscientists who took unconventional routes into the field. From software engineers to artists, learn how diverse backgrounds can be leveraged as strengths in neuroscience research.</p>
+                                    <p><strong>Panelists:</strong> Former teacher turned cognitive researcher, engineer in computational neuroscience, artist studying perception, and self-taught neuroimaging specialist.</p>
+                                </div>
+                                <div class="flip-hint">Click to flip back</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="next-event" onclick="flipCard(this)">
+                        <div class="event-card-inner">
+                            <div class="event-card-front">
+                                <h3>Networking Hour</h3>
+                                <div class="event-date">Wednesday, August 20th, 2025</div>
+                                <div class="event-details">7:00 PM EST • Discord Voice Channel</div>
+                                <p style="margin-bottom: 2rem;">Topic: Connect with Fellow Unconventional Neuroscientists</p>
+                                <a href="https://discord.gg/vVK9NcXKk5" class="event-cta" onclick="event.stopPropagation()">Join Network</a>
+                                <div class="flip-hint">Click to see details</div>
+                            </div>
+                            <div class="event-card-back">
+                                <div class="event-summary">
+                                    <h4>Networking Details</h4>
+                                    <p>A relaxed networking session for community members to connect, share experiences, and build meaningful professional relationships. Perfect for finding collaborators, mentors, or just making friends in the field.</p>
+                                    <p><strong>Activities:</strong> Breakout rooms by interest/background, collaborative project discussions, and informal mentorship matching.</p>
+                                </div>
+                                <div class="flip-hint">Click to flip back</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1657,18 +1833,18 @@
                         <div class="team-name">Nayanika Biswas</div>
                         <div class="team-role">Founder</div>
                     </div>
-                    <a href="https://www.linkedin.com/in/nayanika-biswas/" class="team-linkedin" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/in/nayanika-biswas-a67286152/" class="team-linkedin" target="_blank" rel="noopener noreferrer">
                         <img src="linkedin-bw.png" alt="LinkedIn">
                     </a>
                 </div>
                 
                 <div class="team-card">
-                    <div class="team-photo">👨‍💻</div>
+                    <div class="team-photo avneet"></div>
                     <div class="team-info">
                         <div class="team-name">Avneet Bahra</div>
                         <div class="team-role">Program Manager</div>
                     </div>
-                    <a href="#" class="team-linkedin" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/in/avneetbahra/" class="team-linkedin" target="_blank" rel="noopener noreferrer">
                         <img src="linkedin-bw.png" alt="LinkedIn">
                     </a>
                 </div>
@@ -1750,6 +1926,11 @@
             if (event.target === modal) {
                 closeLetter();
             }
+        }
+
+        // Flip card functionality
+        function flipCard(card) {
+            card.classList.toggle('flipped');
         }
 
         // Simple hover interactions for envelope
