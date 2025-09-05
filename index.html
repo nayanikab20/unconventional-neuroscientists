@@ -1331,6 +1331,128 @@
             color: #D2691E;
             transform: translateY(-2px);
         }
+
+        /* Team Section */
+        .team {
+            background: #D2691E;
+            padding: 3rem 0;
+            position: relative;
+            max-width: none !important;
+            margin: 0 !important;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+        }
+
+        .team-content {
+            position: relative;
+            z-index: 2;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .team h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 2rem;
+            text-align: center;
+            letter-spacing: -0.02em;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .team-card {
+            background: #111;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .team-card:hover {
+            border-color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        .team-photo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border: 2px solid white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #D2691E;
+            flex-shrink: 0;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .team-photo.nayanika {
+            background-image: url('Nayanika_cutout.PNG');
+            background-size: contain;
+            background-position: center top;
+        }
+
+        .team-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .team-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: white;
+            margin: 0;
+        }
+
+        .team-role {
+            font-size: 0.95rem;
+            color: #D2691E;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .team-linkedin {
+            width: 35px;
+            height: 35px;
+            background: #0077B5;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .team-linkedin:hover {
+            background: #005885;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 119, 181, 0.3);
+        }
+
+        .team-linkedin img {
+            width: 18px;
+            height: 18px;
+            filter: brightness(0) invert(1);
+        }
     </style>
 </head>
 <body>
@@ -1516,6 +1638,36 @@
                     </a>
                     <a href="https://www.instagram.com/unconventional.neuroscientist" class="social-icon" title="Follow on Instagram">
                         <img src="instagram-bw.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet the Team Section -->
+    <section class="team">
+        <div class="team-content">
+            <h2>Meet the Team</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-photo nayanika"></div>
+                    <div class="team-info">
+                        <div class="team-name">Nayanika Biswas</div>
+                        <div class="team-role">Founder</div>
+                    </div>
+                    <a href="https://www.linkedin.com/in/nayanika-biswas/" class="team-linkedin" target="_blank" rel="noopener noreferrer">
+                        <img src="linkedin-bw.png" alt="LinkedIn">
+                    </a>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-photo">👨‍💻</div>
+                    <div class="team-info">
+                        <div class="team-name">Avneet Bahra</div>
+                        <div class="team-role">Program Manager</div>
+                    </div>
+                    <a href="#" class="team-linkedin" target="_blank" rel="noopener noreferrer">
+                        <img src="linkedin-bw.png" alt="LinkedIn">
                     </a>
                 </div>
             </div>
