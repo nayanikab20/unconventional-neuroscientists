@@ -1,0 +1,37 @@
+/* Footer */
+.footer {
+    background: #111;
+    color: white;
+    padding: 1.5rem 0;
+}
+
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.footer-discord {
+    background: #D2691E;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.footer-discord:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(210, 105, 30, 0.4);
+    background: #B8641F;
+}
+
+.footer-copyright {
+    color: rgba(255,255,255,0.7);
+    text-align: center;
+    width: 100%;
+}
