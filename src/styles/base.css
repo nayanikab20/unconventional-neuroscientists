@@ -1,0 +1,140 @@
+/* Unconventional Neuroscientists - Base Stylesheet */
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* Section Styles */
+.section {
+    padding: 6rem 0;
+    position: relative;
+    max-width: none;
+    margin: 0;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+}
+
+.section-content {
+    padding: 0 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Utility Classes */
+.cta-button {
+    display: inline-block;
+    background: #D2691E;
+    color: white;
+    padding: 1.5rem 3rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    margin-top: 2rem;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(210, 105, 30, 0.4);
+    background: #B8641F;
+}
+
+/* Letter Modal Styles (for shared modal functionality) */
+.letter-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    animation: fadeIn 0.3s ease;
+}
+
+.letter-content {
+    position: relative;
+    background: #f8f5f0;
+    margin: 5% auto;
+    padding: 3rem;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 15px;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+    max-height: 80vh;
+    overflow-y: auto;
+    animation: slideIn 0.4s ease;
+}
+
+.close-letter {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-letter:hover {
+    color: #D2691E;
+}
+
+.letter-text {
+    font-family: 'Caveat', cursive;
+    font-size: 1.5rem;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.letter-signature {
+    font-family: 'Caveat', cursive;
+    font-size: 1.7rem;
+    color: #D2691E;
+    text-align: right;
+    margin-top: 2rem;
+    font-weight: 600;
+}
+
+.letter-title {
+    font-family: 'Caveat', cursive;
+    font-size: 2.2rem;
+    color: #D2691E;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.letter-highlight {
+    text-align: center;
+    font-size: 1.6rem;
+    color: #D2691E;
+    font-weight: 600;
+    margin: 2rem 0;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}

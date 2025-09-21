@@ -1,0 +1,121 @@
+/* Community Initiatives Component Styles */
+
+.initiatives {
+    background: #000;
+    color: white;
+    padding: 6rem 0;
+    position: relative;
+}
+
+.initiatives::before {
+    content: 'INITIATIVES';
+    position: absolute;
+    font-size: 10rem;
+    font-weight: 900;
+    color: rgba(210, 105, 30, 0.08);
+    top: 1rem;
+    right: 1rem;
+    z-index: 1;
+    letter-spacing: -0.05em;
+}
+
+.initiatives-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.initiatives h2 {
+    font-size: 4rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 3rem;
+    text-align: center;
+    letter-spacing: -0.03em;
+}
+
+.initiatives-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-top: 4rem;
+}
+
+.initiative-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(210, 105, 30, 0.2);
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.initiative-card:hover {
+    border-color: #D2691E;
+    background: rgba(210, 105, 30, 0.1);
+    transform: translateY(-5px);
+}
+
+.initiative-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.initiative-card h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #D2691E;
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
+}
+
+.initiative-card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.initiative-link {
+    display: inline-block;
+    background: #D2691E;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.initiative-link:hover {
+    background: #B8641F;
+    transform: translateY(-2px);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .initiatives {
+        padding: 4rem 0;
+    }
+    
+    .initiatives::before {
+        font-size: 6rem;
+    }
+    
+    .initiatives h2 {
+        font-size: 2.8rem;
+    }
+    
+    .initiatives-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}

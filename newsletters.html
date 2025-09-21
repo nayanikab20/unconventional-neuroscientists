@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unconventional Weekly - Unconventional Neuroscientists</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/styles/main.css">
+    <link rel="stylesheet" href="src/newsletters/newsletters.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo"></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#events">Events</a></li>
+                <li><a href="newsletters.html" class="active">Weekly</a></li>
+                <li><a href="index.html#get-involved">Get Involved</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Newsletters Hero Section -->
+    <section class="newsletters-hero">
+        <div class="newsletters-hero-content">
+            <h1>Unconventional Weekly</h1>
+            <p class="newsletters-tagline">Weekly insights breaking down the latest neuroscience research, trends, and breakthroughs that matter to our community.</p>
+        </div>
+    </section>
+
+    <!-- Newsletters Grid Section -->
+    <section class="newsletters-grid-section">
+        <div class="newsletters-content">
+            <h2>Browse Our Issues</h2>
+            <div class="newsletters-grid">
+                <!-- Newsletter cards will be dynamically generated -->
+                <div class="loading-message">
+                    <p>Loading newsletters...</p>
+                </div>
+            </div>
+
+            <div class="newsletter-subscribe">
+                <h3>Stay Updated</h3>
+                <p>Follow us on LinkedIn to get notified when new issues are published.</p>
+                <a href="https://www.linkedin.com/company/unconventional-neuroscientists/" class="subscribe-btn">Follow on LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PDF Modal -->
+    <div id="pdfModal" class="pdf-modal">
+        <div class="pdf-modal-content">
+            <span class="close-pdf" onclick="closePDF()">&times;</span>
+            <div class="pdf-header">
+                <h3 id="pdfTitle">Newsletter</h3>
+                <a id="downloadLink" href="#" download class="download-btn">Download PDF</a>
+            </div>
+            <iframe id="pdfViewer" src="" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-copyright">© 2025 Unconventional Neuroscientists</p>
+        </div>
+    </footer>
+
+    <script src="src/scripts/script.js"></script>
+    <script src="src/newsletters/newsletters.js"></script>
+</body>
+</html>

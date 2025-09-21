@@ -1,0 +1,109 @@
+/* Mission Component Styles */
+
+.mission {
+    background: #000;
+    color: white;
+    padding: 6rem 0;
+    position: relative;
+}
+
+.mission::before {
+    content: 'MISSION';
+    position: absolute;
+    font-size: 12rem;
+    font-weight: 900;
+    color: rgba(210, 105, 30, 0.1);
+    top: 1rem;
+    right: 2rem;
+    z-index: 1;
+    letter-spacing: -0.05em;
+}
+
+.mission-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.mission h2 {
+    font-size: 4rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 3rem;
+    text-align: center;
+    letter-spacing: -0.03em;
+}
+
+.mission-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.mission-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(210, 105, 30, 0.3);
+    border-radius: 15px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.mission-card:hover {
+    border-color: #D2691E;
+    background: rgba(210, 105, 30, 0.1);
+    transform: translateY(-5px);
+}
+
+.mission-card .number {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #D2691E;
+    margin-bottom: 1rem;
+}
+
+.mission-card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.mission-ps {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.mission-ps p {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #D2691E;
+    margin: 0;
+    letter-spacing: -0.01em;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .mission {
+        padding: 4rem 0;
+    }
+    
+    .mission::before {
+        font-size: 6rem;
+        top: 2rem;
+        right: 1rem;
+    }
+    
+    .mission h2 {
+        font-size: 2.5rem;
+    }
+    
+    .mission-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .mission-ps p {
+        font-size: 1.4rem;
+    }
+}

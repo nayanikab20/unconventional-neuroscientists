@@ -1,0 +1,16 @@
+/* Main CSS File - Imports all component styles */
+
+/* Base styles first */
+@import 'base.css';
+
+/* Component styles in order of appearance */
+@import '../header/header.css';
+@import '../hero/hero.css';
+@import '../movement/movement.css';
+@import '../mission/mission.css';
+@import '../about/about.css';
+@import '../initiatives/initiatives.css';
+@import '../events/events.css';
+@import '../get-involved/get-involved.css';
+@import '../team/team.css';
+@import '../footer/footer.css';
