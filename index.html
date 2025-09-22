@@ -8,6 +8,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/styles/main.css">
+    <link rel="stylesheet" href="src/signup-popup/signup-popup.css">
 </head>
 <body>
     <!-- Header -->
@@ -29,7 +30,7 @@
         <h1>Unconventional Neuroscientists</h1>
         <p class="tagline"><em>The Next Generation of Neuroscience</em></p>
         <div class="hero-ctas">
-            <a href="#events" class="primary-cta">Join Next Event</a>
+            <button id="signUpBtn" class="primary-cta">Sign Up</button>
             <div class="social-links">
                 <a href="https://x.com/UnconvNeurosci" class="social-link" title="Follow on Twitter">
                     <img src="X-bw.png" alt="Twitter/X">
@@ -52,13 +53,11 @@
                 We're a movement.
             </h2>
             
-            <!-- <p class="bio-text" style="font-size: 1.1rem;">
-                A home for the outsiders, the self-taught, the mission-driven misfits who believe neuroscience is too important to be gatekept.
-            </p>
-             -->
-            <p class="bio-text">
+            <p class="bio-text">As the rules of learning and education are changing, people from diverse backgrounds who are passionate about neuroscience are stepping up — taking action to contribute, to make a change, to make an impact.</p>
+            
+            <!-- <p class="bio-text">
                 Most of us didn't start in neuroscience. We arrived through a moment — a health crisis, a random paper, a conversation that stuck. Something clicked, and the brain became the mission. But without a traditional degree or "right" background, many of us still don't feel we belong.
-            </p>
+            </p> -->
             
             <div class="diverse-minds">
                 Some of the world's <span class="orange">brightest minds</span> are already obsessed with the brain — <span class="orange">founders, artists, engineers</span>, even if they never studied it formally.
@@ -68,13 +67,13 @@
                 We're building a home for them. And for you.
             </p>
             
-            <p class="bio-text center">
-                A platform for stories, connections, and people who learn what they need to build, discover and innovate what they believe in.
-            </p>
-            
             <div class="final-question">
-                If that's not a scientist, what is?
+                A platform for stories, connections, and people shaping the next generation of Neuroscience.
             </div>
+            
+            <!-- <div class="final-question">
+                If that's not a scientist, what is?
+            </div> -->
         </div>
     </section>
 
@@ -370,7 +369,39 @@
         </div>
     </footer>
 
+    <!-- Sign Up Popup Modal -->
+    <div id="signUpModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            
+            <div class="modal-header">
+                <h1>Join the next generation of neuroscience</h1>
+                <p class="modal-subtitle">Stay updated with our Unconventional Weekly, NeuroStories and upcoming events.</p>
+            </div>
+            
+            <form id="signUpForm" class="signup-form">
+                <div class="form-row">
+                    <input type="text" id="firstName" name="firstName" placeholder="First name" required>
+                    <input type="text" id="lastName" name="lastName" placeholder="Last name" required>
+                </div>
+                
+                <div class="email-input-container">
+                    <input type="email" id="signupEmail" name="email" placeholder="Enter your email" required>
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-text">></span>
+                        <span class="btn-loading" style="display: none;">
+                            <span class="spinner"></span>
+                        </span>
+                    </button>
+                </div>
+                
+                <div id="signupMessage" class="form-message"></div>
+            </form>
+        </div>
+    </div>
+
     <script src="src/scripts/script.js"></script>
     <script src="src/email-signup/email-signup.js"></script>
+    <script src="src/signup-popup/signup-popup.js"></script>
 </body>
 </html>
